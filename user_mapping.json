@@ -1,0 +1,90 @@
+{
+  "_instructions": "Change the keys (e.g., 'Andrews.O..Appiah') to match the exact username Kraken sends (e.g., 'Andy.Appiah').",
+  "mapping": {
+    "Andrews.O.Appiah": {
+      "odoo_user_id": 2,
+      "odoo_name": "Andrews O. Appiah",
+      "odoo_email": "andrewsap@stlghana.com"
+    },
+    "Chris": {
+      "odoo_user_id": 8,
+      "odoo_name": "Chris",
+      "odoo_email": "chrisbe@stlghana.com"
+    },
+    "Chris.Bekor": {
+      "odoo_user_id": 22,
+      "odoo_name": "Chris Bekor",
+      "odoo_email": "chrisbekor99@gmail.com"
+    },
+    "Daniel.David": {
+      "odoo_user_id": 11,
+      "odoo_name": "Daniel David",
+      "odoo_email": "danielda@stlghana.com"
+    },
+    "Daniel.Ovdat": {
+      "odoo_user_id": 9,
+      "odoo_name": "Daniel Ovdat",
+      "odoo_email": "danielov@stlghana.com"
+    },
+    "David": {
+      "odoo_user_id": 21,
+      "odoo_name": "David",
+      "odoo_email": "davidas@gmail.com"
+    },
+    "Dorcas": {
+      "odoo_user_id": 24,
+      "odoo_name": "Dorcas",
+      "odoo_email": "dorcasan@stlghana.com"
+    },
+    "Edith": {
+      "odoo_user_id": 26,
+      "odoo_name": "Edith",
+      "odoo_email": "edithse@stlghana.com"
+    },
+    "Felicia": {
+      "odoo_user_id": 25,
+      "odoo_name": "Felicia",
+      "odoo_email": "feliciaah@stlghana.com"
+    },
+    "Jason": {
+      "odoo_user_id": 19,
+      "odoo_name": "Jason",
+      "odoo_email": "jasonas@stlghana.com"
+    },
+    "Joanita": {
+      "odoo_user_id": 14,
+      "odoo_name": "Joanita",
+      "odoo_email": "joanitaal@stlghana.com"
+    },
+    "Joseph": {
+      "odoo_user_id": 20,
+      "odoo_name": "Joseph",
+      "odoo_email": "josephas@gmail.com"
+    },
+    "Marc.Demo": {
+      "odoo_user_id": 5,
+      "odoo_name": "Marc Demo",
+      "odoo_email": "demo"
+    },
+    "Salmata": {
+      "odoo_user_id": 23,
+      "odoo_name": "Salmata",
+      "odoo_email": "salmataab@stlghana.com"
+    },
+    "Seshachala.H.R": {
+      "odoo_user_id": 10,
+      "odoo_name": "Seshachala H.R",
+      "odoo_email": "seshachala.h.r@stlghana.com"
+    },
+    "Taufic": {
+      "odoo_user_id": 13,
+      "odoo_name": "Taufic",
+      "odoo_email": "taufic666abdallah@gmail.com"
+    },
+    "taufic": {
+      "odoo_user_id": 7,
+      "odoo_name": "taufic",
+      "odoo_email": "tauficwa@stlghana.com"
+    }
+  }
+}

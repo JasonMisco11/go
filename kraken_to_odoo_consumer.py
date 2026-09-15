@@ -68,13 +68,18 @@ PRIORITY_MAP = {
 ISSUE_TYPE_MAPPING_FILE = "ticket_type_to_odoo_issue_type.json"
 REQUESTOR_TYPE_DEFAULT = "external"  # TODO: confirm valid selection value - Kraken tickets are all external
 
-# TODO: build from a real employee/user export - Kraken username -> Odoo user id
-ASSIGNEE_MAP = {
-    # "supertech_erp": 17,
-}
-REPORTER_MAP = {
-    # "jasonas": 5,
-}
+USER_MAPPING_FILE = "user_mapping.json"
+
+def load_user_mapping() -> dict:
+    try:
+        with open(USER_MAPPING_FILE) as f:
+            data = json.load(f)
+            # Map the Kraken username (the dict key) to the Odoo user ID
+            return {k: v.get("odoo_user_id") for k, v in data.get("mapping", {}).items()}
+    except FileNotFoundError:
+        return {}
+
+USER_MAP = load_user_mapping()
 
 logging.basicConfig(
     level=logging.INFO,
@@ -213,11 +218,11 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
     )
     issue_type_id = odoo.get_issue_type_id(issue_type_name)
 
-    assignee_id = ASSIGNEE_MAP.get(ticket.get("assignedTo"))
+    assignee_id = USER_MAP.get(ticket.get("assignedTo"))
     if assignee_id is None:
         log.warning("No Odoo user mapped for assignedTo='%s'", ticket.get("assignedTo"))
 
-    reporter_id = REPORTER_MAP.get(ticket.get("owner") or ticket.get("createdBy"))
+    reporter_id = USER_MAP.get(ticket.get("owner") or ticket.get("createdBy"))
 
     description_parts = [ticket.get("description") or ""]
     if ticket.get("cause"):

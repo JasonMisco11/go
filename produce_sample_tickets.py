@@ -28,7 +28,7 @@ producer = KafkaProducer(
 STATUSES = ["OPEN", "ASSIGNED", "IN_PROGRESS", "RESOLVED", "CLOSED"]
 PRIORITIES = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 SEVERITIES = ["MINOR", "MAJOR", "CRITICAL"]
-ASSIGNEES = ["supertech_erp", "Andy.Appiah", "Ahsesa.Frimpong"]
+ASSIGNEES = ["supertech_erp", "Andy.Appiah", "Aisha.Frimpong"]
 CATEGORIES = ["Network", "Hardware", "Software", "Access Request"]
 REGIONS = ["Greater Accra", "Ashanti", "Western"]
 
@@ -46,7 +46,7 @@ def make_incident(ticket_num: int) -> dict:
         "priority": random.choice(PRIORITIES),
         "severity": random.choice(SEVERITIES),
         "status": random.choice(STATUSES),
-        "contactPerson": "John Doe",
+        "contactPerson": "Jason Mi",
         "contactOnSite": "Site Contact",
         "description": f"Sample incident #{ticket_num} description",
         "cause": "",
@@ -68,7 +68,7 @@ def make_incident(ticket_num: int) -> dict:
 
 if __name__ == "__main__":
     # Create ONE ticket
-    event = make_incident(100)
+    event = make_incident(3)
     producer.send(TOPIC, event)
     print(f"Created ticket {event['serviceRecordNumber']} (ID: {event['id']})")
     producer.flush()
