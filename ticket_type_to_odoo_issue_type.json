@@ -1,0 +1,11 @@
+{
+  "_instructions": "Map Kraken ticket types to Odoo x_issue_type selection values.",
+  "mapping": {
+    "Incident": "Incident",
+    "Recurring": "Task",
+    "Reference": "Task",
+    "Request": "Task",
+    "Update": "Task"
+  },
+  "fallback_issue_type": "Task"
+}

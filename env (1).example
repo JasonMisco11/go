@@ -1,0 +1,10 @@
+# Copy this to .env and fill in real values. Never commit the real .env file.
+
+ODOO_URL=http://192.168.250.209:8079
+ODOO_DB=odoo19
+ODOO_USERNAME=jasonas@stlghana.com
+ODOO_API_KEY=your-api-key
+
+# Leave unset (or comment out) to use the real broker - only set this
+# when testing against the local Docker Kafka from docker-compose.yml
+# KAFKA_BOOTSTRAP_SERVERS=localhost:9094

@@ -1,0 +1,998 @@
+2026-09-15 10:34:56,048 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-15 10:34:56,049 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-15 10:34:56,049 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-15 10:34:56,055 INFO <KafkaTCPTransport [::1:9094<-53215]>: connected to <socket.socket fd=1308, family=23, type=1, proto=0, laddr=('::1', 53215, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:34:56,348 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-53215] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-15 10:34:56,349 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-53215] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:34:56,359 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:34:56,359 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:34:56,360 INFO Closing bootstrap connection bootstrap-0
+2026-09-15 10:34:56,360 INFO <KafkaTCPTransport [::1:9094<-53215]>: Closing transport
+2026-09-15 10:34:56,360 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 10:34:56,361 INFO Starting metadata refresh loop
+2026-09-15 10:34:56,362 INFO Updating subscribed topics to: ('tickets',)
+2026-09-15 10:34:56,363 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-15 10:34:56,364 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-15 10:34:56,365 INFO <KafkaTCPTransport [::1:9094<-53477]>: connected to <socket.socket fd=1308, family=23, type=1, proto=0, laddr=('::1', 53477, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:34:56,386 INFO <KafkaConnection node_id=1 host=[::1:9094<-53477] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:34:56,944 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 0)
+2026-09-15 10:34:57,407 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:57,408 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:57,408 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 10:34:57,409 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-15 10:34:57,409 INFO <KafkaTCPTransport [::1:9094<-62200]>: connected to <socket.socket fd=1312, family=23, type=1, proto=0, laddr=('::1', 62200, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:34:57,410 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:57,424 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-62200] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:34:57,567 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:57,567 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:57,679 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:57,680 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:57,680 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:57,681 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:57,681 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:57,798 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:57,798 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:57,799 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:57,803 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:57,803 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:57,909 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:57,909 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:57,909 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:57,912 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:57,912 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:58,014 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:58,014 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:58,015 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:58,016 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:58,016 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:58,130 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:58,130 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:58,130 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:58,132 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:58,132 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:58,245 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:58,246 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:58,246 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:58,247 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:58,247 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:58,362 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:58,362 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:58,362 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:58,363 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: [Error 16] NotCoordinatorError.
+2026-09-15 10:34:58,363 INFO Attempt to join group odoo-ticket-sync failed due to obsolete coordinator information: NotCoordinatorError
+2026-09-15 10:34:58,479 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:34:58,479 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:34:58,479 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:34:58,566 INFO Received member id kafka-python-3.0.11-24913a06-dfe3-4700-afe7-bf66a36e47bb for group odoo-ticket-sync; will retry join-group
+2026-09-15 10:34:58,566 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:35:01,666 INFO Successfully joined group odoo-ticket-sync <Generation 1 (member_id: kafka-python-3.0.11-24913a06-dfe3-4700-afe7-bf66a36e47bb, protocol: range)>
+2026-09-15 10:35:01,666 INFO Elected group leader -- performing partition assignments using range
+2026-09-15 10:35:01,670 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:35:01,757 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-15 10:35:01,757 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-15 10:35:01,811 INFO Resetting offset for partition TopicPartition(topic='tickets', partition=0) to offset 0.
+2026-09-15 10:35:02,686 ERROR Failed to process message at offset 0
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,740 ERROR Failed to process message at offset 1
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,801 ERROR Failed to process message at offset 2
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,841 ERROR Failed to process message at offset 3
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,891 ERROR Failed to process message at offset 4
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,938 ERROR Failed to process message at offset 5
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:02,992 ERROR Failed to process message at offset 6
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:03,038 ERROR Failed to process message at offset 7
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:03,087 ERROR Failed to process message at offset 8
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:03,138 ERROR Failed to process message at offset 9
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'ICT General\']]\n'>
+2026-09-15 10:35:50,440 ERROR Failed to process message at offset 10
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'NOC\']]\n'>
+2026-09-15 10:35:50,888 ERROR Failed to process message at offset 11
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'CyberHawk\']]\n'>
+2026-09-15 10:35:51,399 ERROR Failed to process message at offset 12
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'CyberHawk\']]\n'>
+2026-09-15 10:35:51,895 ERROR Failed to process message at offset 13
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'NOC\']]\n'>
+2026-09-15 10:35:52,381 ERROR Failed to process message at offset 14
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 209, in transform_ticket
+    department_id = odoo.get_department_id(department_name)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 150, in get_department_id
+    ids = self._execute("hr.department", "search", [[("name", "=", department_name)]])
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 1: 'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 162, in xmlrpc_2\n    response = self._xmlrpc(service)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/addons/rpc/controllers/xmlrpc.py", line 134, in _xmlrpc\n    result = dispatch_rpc(service, method, params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/http.py", line 445, in dispatch_rpc\n    return dispatch(method, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 130, in dispatch\n    res = execute_cr(cr, uid, model, method_, args, kw)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 147, in execute_cr\n    result = retrying(partial(call_kw, recs, method, args, kw), env)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 185, in retrying\n    result = func()\n             ^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 94, in call_kw\n    result = method(recs, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1378, in search\n    return self.search_fetch(domain, [], offset=offset, limit=limit, order=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 1408, in search_fetch\n    query = self._search(domain, offset=offset, limit=limit, order=order or self._order)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 5353, in _search\n    domain = Domain(domain)\n             ^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/odoo/orm/domains.py", line 269, in __new__\n    raise ValueError(f"Domain() invalid item in domain: {item!r}")\nValueError: Domain() invalid item in domain: [[\'name\', \'=\', \'IT&DC\']]\n'>
+2026-09-15 10:39:25,587 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-15 10:39:25,588 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-15 10:39:25,588 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-15 10:39:25,593 INFO <KafkaTCPTransport [::1:9094<-56971]>: connected to <socket.socket fd=1292, family=23, type=1, proto=0, laddr=('::1', 56971, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:39:25,600 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-56971] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-15 10:39:25,600 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-56971] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:39:25,607 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:39:25,608 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:39:25,608 INFO Closing bootstrap connection bootstrap-0
+2026-09-15 10:39:25,608 INFO <KafkaTCPTransport [::1:9094<-56971]>: Closing transport
+2026-09-15 10:39:25,608 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 10:39:25,608 INFO Starting metadata refresh loop
+2026-09-15 10:39:25,609 INFO Updating subscribed topics to: ('tickets',)
+2026-09-15 10:39:25,610 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-15 10:39:25,611 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-15 10:39:25,612 INFO <KafkaTCPTransport [::1:9094<-56972]>: connected to <socket.socket fd=1296, family=23, type=1, proto=0, laddr=('::1', 56972, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:39:25,619 INFO <KafkaConnection node_id=1 host=[::1:9094<-56972] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:39:25,623 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:39:25,623 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:39:25,623 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 10:39:25,625 INFO <KafkaTCPTransport [::1:9094<-56973]>: connected to <socket.socket fd=1300, family=23, type=1, proto=0, laddr=('::1', 56973, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:39:25,625 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-15 10:39:25,626 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:39:25,632 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-56973] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:39:25,640 INFO Received member id kafka-python-3.0.11-2ce6fcaf-300b-44ec-904c-6989a1c33267 for group odoo-ticket-sync; will retry join-group
+2026-09-15 10:39:25,640 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:39:25,717 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:40:05,335 INFO Successfully joined group odoo-ticket-sync <Generation 2 (member_id: kafka-python-3.0.11-2ce6fcaf-300b-44ec-904c-6989a1c33267, protocol: range)>
+2026-09-15 10:40:05,335 INFO Elected group leader -- performing partition assignments using range
+2026-09-15 10:40:05,340 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:40:05,342 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-15 10:40:05,342 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-15 10:41:32,633 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:41:32,690 ERROR Failed to process message at offset 15
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:41:33,040 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:41:33,087 ERROR Failed to process message at offset 16
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:41:33,492 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:41:33,538 ERROR Failed to process message at offset 17
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:41:33,992 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:41:34,038 ERROR Failed to process message at offset 18
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:41:34,544 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:41:34,584 ERROR Failed to process message at offset 19
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:42:41,599 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:42:41,637 ERROR Failed to process message at offset 20
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:42:42,018 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:42:42,059 ERROR Failed to process message at offset 21
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:42:42,519 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:42:42,572 ERROR Failed to process message at offset 22
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:42:43,019 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:42:43,075 ERROR Failed to process message at offset 23
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:42:43,520 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:42:43,562 ERROR Failed to process message at offset 24
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 279, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 231, in transform_ticket
+    "project_id": odoo.get_project_id(),
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 143, in get_project_id
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+RuntimeError: Odoo project 'TOR Odoo Project' not found
+2026-09-15 10:43:08,554 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-15 10:43:08,555 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-15 10:43:08,555 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-15 10:43:08,559 INFO <KafkaTCPTransport [::1:9094<-62254]>: connected to <socket.socket fd=1260, family=23, type=1, proto=0, laddr=('::1', 62254, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:43:08,565 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-62254] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-15 10:43:08,566 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-62254] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:43:08,571 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:43:08,571 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:43:08,571 INFO Closing bootstrap connection bootstrap-0
+2026-09-15 10:43:08,572 INFO <KafkaTCPTransport [::1:9094<-62254]>: Closing transport
+2026-09-15 10:43:08,572 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 10:43:08,572 INFO Starting metadata refresh loop
+2026-09-15 10:43:08,574 INFO Updating subscribed topics to: ('tickets',)
+2026-09-15 10:43:08,574 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-15 10:43:08,575 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-15 10:43:08,576 INFO <KafkaTCPTransport [::1:9094<-62255]>: connected to <socket.socket fd=1300, family=23, type=1, proto=0, laddr=('::1', 62255, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:43:08,580 INFO <KafkaConnection node_id=1 host=[::1:9094<-62255] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:43:08,584 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:43:08,584 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:43:08,584 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 10:43:08,586 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-15 10:43:08,587 INFO <KafkaTCPTransport [::1:9094<-62256]>: connected to <socket.socket fd=1184, family=23, type=1, proto=0, laddr=('::1', 62256, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:43:08,587 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:43:08,593 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-62256] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:43:08,597 INFO Received member id kafka-python-3.0.11-a4bbf926-e1fc-45a3-94ac-9846d79c89e9 for group odoo-ticket-sync; will retry join-group
+2026-09-15 10:43:08,598 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:43:08,680 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:43:47,815 INFO Successfully joined group odoo-ticket-sync <Generation 3 (member_id: kafka-python-3.0.11-a4bbf926-e1fc-45a3-94ac-9846d79c89e9, protocol: range)>
+2026-09-15 10:43:47,816 INFO Elected group leader -- performing partition assignments using range
+2026-09-15 10:43:47,821 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:43:47,823 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-15 10:43:47,823 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-15 10:43:47,967 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:43:48,013 ERROR Failed to process message at offset 25
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 287, in run
+    new_task_id = odoo.create_task(odoo_fields)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 164, in create_task
+    return self._execute("project.task", "create", values)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1432, in __request
+    request = dumps(params, methodname, encoding=self.__encoding,
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    allow_none=self.__allow_none).encode(self.__encoding, 'xmlcharrefreplace')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 955, in dumps
+    data = m.dumps(params)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 488, in dumps
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 563, in dump_array
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 581, in dump_struct
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 514, in dump_nil
+    raise TypeError("cannot marshal None unless allow_none is enabled")
+TypeError: cannot marshal None unless allow_none is enabled
+2026-09-15 10:43:48,020 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:43:48,020 ERROR Failed to process message at offset 26
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 287, in run
+    new_task_id = odoo.create_task(odoo_fields)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 164, in create_task
+    return self._execute("project.task", "create", values)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1432, in __request
+    request = dumps(params, methodname, encoding=self.__encoding,
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    allow_none=self.__allow_none).encode(self.__encoding, 'xmlcharrefreplace')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 955, in dumps
+    data = m.dumps(params)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 488, in dumps
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 563, in dump_array
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 581, in dump_struct
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 514, in dump_nil
+    raise TypeError("cannot marshal None unless allow_none is enabled")
+TypeError: cannot marshal None unless allow_none is enabled
+2026-09-15 10:43:48,071 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:43:48,072 ERROR Failed to process message at offset 27
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 287, in run
+    new_task_id = odoo.create_task(odoo_fields)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 164, in create_task
+    return self._execute("project.task", "create", values)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1432, in __request
+    request = dumps(params, methodname, encoding=self.__encoding,
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    allow_none=self.__allow_none).encode(self.__encoding, 'xmlcharrefreplace')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 955, in dumps
+    data = m.dumps(params)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 488, in dumps
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 563, in dump_array
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 581, in dump_struct
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 514, in dump_nil
+    raise TypeError("cannot marshal None unless allow_none is enabled")
+TypeError: cannot marshal None unless allow_none is enabled
+2026-09-15 10:43:48,126 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:43:48,127 ERROR Failed to process message at offset 28
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 287, in run
+    new_task_id = odoo.create_task(odoo_fields)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 164, in create_task
+    return self._execute("project.task", "create", values)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1432, in __request
+    request = dumps(params, methodname, encoding=self.__encoding,
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    allow_none=self.__allow_none).encode(self.__encoding, 'xmlcharrefreplace')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 955, in dumps
+    data = m.dumps(params)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 488, in dumps
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 563, in dump_array
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 581, in dump_struct
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 514, in dump_nil
+    raise TypeError("cannot marshal None unless allow_none is enabled")
+TypeError: cannot marshal None unless allow_none is enabled
+2026-09-15 10:43:48,135 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:43:48,135 ERROR Failed to process message at offset 29
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 287, in run
+    new_task_id = odoo.create_task(odoo_fields)
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 164, in create_task
+    return self._execute("project.task", "create", values)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 137, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1432, in __request
+    request = dumps(params, methodname, encoding=self.__encoding,
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    allow_none=self.__allow_none).encode(self.__encoding, 'xmlcharrefreplace')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 955, in dumps
+    data = m.dumps(params)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 488, in dumps
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 563, in dump_array
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 581, in dump_struct
+    dump(v, write)
+    ~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 510, in __dump
+    f(self, value, write)
+    ~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 514, in dump_nil
+    raise TypeError("cannot marshal None unless allow_none is enabled")
+TypeError: cannot marshal None unless allow_none is enabled
+2026-09-15 10:48:47,763 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:50:23,428 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-15 10:50:23,429 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-15 10:50:23,429 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-15 10:50:23,433 INFO <KafkaTCPTransport [::1:9094<-64169]>: connected to <socket.socket fd=1304, family=23, type=1, proto=0, laddr=('::1', 64169, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:50:23,441 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-64169] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-15 10:50:23,441 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-64169] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:50:23,447 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:50:23,448 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 10:50:23,448 INFO Closing bootstrap connection bootstrap-0
+2026-09-15 10:50:23,448 INFO <KafkaTCPTransport [::1:9094<-64169]>: Closing transport
+2026-09-15 10:50:23,448 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 10:50:23,449 INFO Starting metadata refresh loop
+2026-09-15 10:50:23,450 INFO Updating subscribed topics to: ('tickets',)
+2026-09-15 10:50:23,451 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-15 10:50:23,451 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-15 10:50:23,452 INFO <KafkaTCPTransport [::1:9094<-64170]>: connected to <socket.socket fd=1308, family=23, type=1, proto=0, laddr=('::1', 64170, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:50:23,459 INFO <KafkaConnection node_id=1 host=[::1:9094<-64170] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:50:23,463 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 10:50:23,463 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 10:50:23,463 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 10:50:23,464 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-15 10:50:23,465 INFO <KafkaTCPTransport [::1:9094<-64171]>: connected to <socket.socket fd=1312, family=23, type=1, proto=0, laddr=('::1', 64171, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 10:50:23,465 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:50:23,469 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-64171] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 10:50:23,475 INFO Received member id kafka-python-3.0.11-e0e6ba9b-401f-41ed-a626-fe981f755380 for group odoo-ticket-sync; will retry join-group
+2026-09-15 10:50:23,475 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 10:50:23,556 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:50:45,689 INFO Successfully joined group odoo-ticket-sync <Generation 4 (member_id: kafka-python-3.0.11-e0e6ba9b-401f-41ed-a626-fe981f755380, protocol: range)>
+2026-09-15 10:50:45,690 INFO Elected group leader -- performing partition assignments using range
+2026-09-15 10:50:45,695 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 10:50:45,697 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-15 10:50:45,697 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-15 10:50:58,840 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:50:59,027 INFO Created Odoo task 493 for ticket 1
+2026-09-15 10:50:59,273 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 10:50:59,441 INFO Created Odoo task 494 for ticket 2
+2026-09-15 10:50:59,726 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:50:59,893 INFO Created Odoo task 495 for ticket 3
+2026-09-15 10:51:00,277 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 10:51:00,423 INFO Created Odoo task 496 for ticket 4
+2026-09-15 10:51:00,727 WARNING No Odoo user mapped for assignedTo='Ahsesa.Frimpong'
+2026-09-15 10:51:00,853 INFO Created Odoo task 497 for ticket 5
+2026-09-15 10:55:45,727 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:00:45,809 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:05:46,048 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:10:46,349 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:15:46,699 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:20:46,945 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:25:47,202 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:30:47,525 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:35:47,570 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:40:47,823 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:45:48,085 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:50:48,226 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 11:55:48,244 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 12:00:48,267 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 12:00:57,606 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 12:00:58,512 INFO Created Odoo task 498 for ticket 100
+2026-09-15 12:01:02,619 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-15 12:01:03,572 INFO Updated Odoo task 498 for ticket 100 (status=Resolved)
