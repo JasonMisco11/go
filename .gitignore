@@ -1,0 +1,14 @@
+# Environment variables (Credentials)
+.env
+
+# SQLite databases
+*.db
+*.sqlite3
+
+# Logs
+*.log
+sync.log
+
+# Python cache
+__pycache__/
+*.pyc

@@ -2475,3 +2475,73 @@ Traceback (most recent call last):
     raise Fault(**self._stack[0])
 xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13842,), User: 14)'>
 2026-09-16 16:10:46,111 INFO Updated Odoo task 13843 for ticket 202 (status=OPEN)
+2026-09-16 16:11:38,980 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-16 16:11:38,980 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-16 16:11:38,981 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-16 16:11:38,985 INFO <KafkaTCPTransport [::1:9094<-63985]>: connected to <socket.socket fd=1284, family=23, type=1, proto=0, laddr=('::1', 63985, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 16:11:38,992 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-63985] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-16 16:11:38,992 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-63985] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 16:11:38,998 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 16:11:38,998 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 16:11:38,998 INFO Closing bootstrap connection bootstrap-0
+2026-09-16 16:11:38,999 INFO <KafkaTCPTransport [::1:9094<-63985]>: Closing transport
+2026-09-16 16:11:38,999 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 16:11:38,999 INFO Starting metadata refresh loop
+2026-09-16 16:11:39,000 INFO Updating subscribed topics to: ('tickets',)
+2026-09-16 16:11:39,001 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-16 16:11:39,001 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 16:11:39,002 INFO <KafkaTCPTransport [::1:9094<-63986]>: connected to <socket.socket fd=1284, family=23, type=1, proto=0, laddr=('::1', 63986, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 16:11:39,006 INFO <KafkaConnection node_id=1 host=[::1:9094<-63986] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 16:11:39,011 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 16:11:39,011 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 16:11:39,012 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 16:11:39,013 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-16 16:11:39,013 INFO <KafkaTCPTransport [::1:9094<-63987]>: connected to <socket.socket fd=1296, family=23, type=1, proto=0, laddr=('::1', 63987, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 16:11:39,014 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 16:11:39,018 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-63987] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 16:11:39,021 INFO Received member id kafka-python-3.0.11-9c6192c2-df56-408f-bdd4-df3d4dd97813 for group odoo-ticket-sync; will retry join-group
+2026-09-16 16:11:39,022 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 16:11:39,109 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 16:12:19,731 INFO Successfully joined group odoo-ticket-sync <Generation 18 (member_id: kafka-python-3.0.11-9c6192c2-df56-408f-bdd4-df3d4dd97813, protocol: range)>
+2026-09-16 16:12:19,731 INFO Elected group leader -- performing partition assignments using range
+2026-09-16 16:12:19,736 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 16:12:19,739 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-16 16:12:19,739 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-16 16:12:21,387 ERROR Failed to process message at offset 95
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 362, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 239, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 178, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13842,), User: 14)'>
+2026-09-16 16:12:21,841 INFO Updated Odoo task 13843 for ticket 202 (status=OPEN)
+2026-09-16 16:13:44,516 INFO Created Odoo task 13844 for ticket 301
+2026-09-16 16:13:45,449 INFO Created Odoo task 13845 for ticket 302
+2026-09-16 16:17:20,198 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 16:22:20,383 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 16:27:20,594 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
