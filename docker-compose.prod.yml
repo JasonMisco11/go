@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  odoo-kraken-consumer:
+    build: .
+    container_name: odoo_kraken_consumer
+    restart: unless-stopped
+    # Use your production environment variables here, or load them from a .env file on the server
+    env_file:
+      - .env
+    volumes:
+      # Mount a local 'data' folder into the container so the SQLite DB and logs survive restarts
+      - ./data:/app/data

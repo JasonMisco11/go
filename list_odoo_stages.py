@@ -7,9 +7,9 @@ uid = common.authenticate(env['ODOO_DB'], env['ODOO_USERNAME'], env['ODOO_API_KE
 models = xmlrpc.client.ServerProxy(env['ODOO_URL'] + '/xmlrpc/2/object', allow_none=True)
 
 # First get the Kraken project ID
-project_ids = models.execute_kw(env['ODOO_DB'], uid, env['ODOO_API_KEY'], 'project.project', 'search', [[('name', '=', 'Kraken')]])
+project_ids = models.execute_kw(env['ODOO_DB'], uid, env['ODOO_API_KEY'], 'project.project', 'search', [[('name', '=', 'Kraken Testing')]])
 if not project_ids:
-    print("Project 'Kraken' not found!")
+    print("Project 'Kraken Testing' not found!")
     exit(1)
 project_id = project_ids[0]
 

@@ -9,6 +9,8 @@ Setup:
 Run:
     python produce_sample_tickets.py
 """
+####kraken here
+
 
 import json
 import random
@@ -28,7 +30,7 @@ producer = KafkaProducer(
 STATUSES = ["OPEN", "ASSIGNED", "IN_PROGRESS", "RESOLVED", "CLOSED"]
 PRIORITIES = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 SEVERITIES = ["MINOR", "MAJOR", "CRITICAL"]
-ASSIGNEES = ["supertech_erp", "Andy.Appiah", "Aisha.Frimpong"]
+ASSIGNEES = ["Chris Kwaku Bekor", "shulamitebu@stlghana.com", "Jason Asamoah"]
 CATEGORIES = ["Network", "Hardware", "Software", "Access Request"]
 REGIONS = ["Greater Accra", "Ashanti", "Western"]
 
@@ -67,25 +69,21 @@ def make_incident(ticket_num: int) -> dict:
 
 
 if __name__ == "__main__":
-    # Create ONE ticket
-    event = make_incident(3)
-    producer.send(TOPIC, event)
-    print(f"Created ticket {event['serviceRecordNumber']} (ID: {event['id']})")
+    print("Sending IT&DC test ticket for Jason...")
+    event_jason = make_incident(201)
+    event_jason["assignedTo"] = "jasonas"            # <--- Update this to match Jason's Kraken username!
+    event_jason["adminGroup"] = "IT SUPPORT"         # Maps to IT&DC in your JSON
+    event_jason["status"] = "OPEN"                   
+    producer.send(TOPIC, event_jason)
+    print(f"Created ticket {event_jason['serviceRecordNumber']} for Jason")
+
+    print("Sending Application test ticket for Chris...")
+    event_chris = make_incident(202)
+    event_chris["assignedTo"] = "chrisbe"            # <--- Update this to match Chris's Kraken username!
+    event_chris["adminGroup"] = "APPLICATIONS"       # Maps to Application in your JSON
+    event_chris["status"] = "OPEN"                   
+    producer.send(TOPIC, event_chris)
+    print(f"Created ticket {event_chris['serviceRecordNumber']} for Chris")
+
     producer.flush()
-
-    print("Waiting 5 seconds before sending an update...")
-    time.sleep(5)
-
-    # Update the same ticket
-    event["status"] = "RESOLVED"
-    event["priority"] = "CRITICAL"
-    event["solution"] = "We fixed it by restarting the router."
-    event["description"] += " [UPDATED]"
-    event["modifiedTime"] = int(datetime.now(timezone.utc).timestamp())
-    event["modifiedBy"] = "jason.admin"
-
-    producer.send(TOPIC, event)
-    print(f"Updated ticket {event['serviceRecordNumber']} -> status={event['status']}")
-    
-    producer.flush()
-    print("Done. Check Odoo to see if the task was updated instead of duplicated.")
+    print("Done! Check Odoo to see if both tasks were created with the correct departments and assignees.")

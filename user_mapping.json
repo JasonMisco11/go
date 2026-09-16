@@ -1,90 +1,810 @@
 {
   "_instructions": "Change the keys (e.g., 'Andrews.O..Appiah') to match the exact username Kraken sends (e.g., 'Andy.Appiah').",
   "mapping": {
-    "Andrews.O.Appiah": {
+    "Aaron.Awuah-Darko": {
+      "odoo_user_id": 754,
+      "odoo_name": "Aaron Awuah-Darko",
+      "odoo_email": "aaronda@stlghana.com"
+    },
+    "Abigail.Abena.Adufo": {
+      "odoo_user_id": 755,
+      "odoo_name": "Abigail Abena Adufo",
+      "odoo_email": "abigailadu@stlghana.com"
+    },
+    "Abraham.Bortey": {
+      "odoo_user_id": 756,
+      "odoo_name": "Abraham Bortey",
+      "odoo_email": "borteyab@stlghana.com"
+    },
+    "Adam.Abdul-Gafaru": {
+      "odoo_user_id": 757,
+      "odoo_name": "Adam  Abdul-Gafaru",
+      "odoo_email": "adamab@cyber-hawk.com"
+    },
+    "Administrator": {
       "odoo_user_id": 2,
+      "odoo_name": "Administrator",
+      "odoo_email": "admin"
+    },
+    "Agnes.Joana.Badoe": {
+      "odoo_user_id": 759,
+      "odoo_name": "Agnes Joana Badoe",
+      "odoo_email": "agnesba@stlghana.com"
+    },
+    "Akosua.Amoakowaa.Amoako": {
+      "odoo_user_id": 760,
+      "odoo_name": "Akosua Amoakowaa Amoako",
+      "odoo_email": "akosuaam@cyber-hawk.com"
+    },
+    "Akua.Adutwuwaa.Akwaoah": {
+      "odoo_user_id": 761,
+      "odoo_name": "Akua Adutwuwaa Akwaoah",
+      "odoo_email": "akuaad@stlghana.com"
+    },
+    "Alexander.D.Ampem": {
+      "odoo_user_id": 762,
+      "odoo_name": "Alexander D. Ampem",
+      "odoo_email": "alexanderam@stlghana.com"
+    },
+    "Alon.Talmor": {
+      "odoo_user_id": 763,
+      "odoo_name": "Alon Talmor",
+      "odoo_email": "alonta@stlghana.com"
+    },
+    "Amir.Ilany": {
+      "odoo_user_id": 764,
+      "odoo_name": "Amir Ilany",
+      "odoo_email": "amiril@stlghana.com"
+    },
+    "Amit.Meluban": {
+      "odoo_user_id": 765,
+      "odoo_name": "Amit Meluban",
+      "odoo_email": "amitme@stlghana.com"
+    },
+    "Andrews.O.Appiah": {
+      "odoo_user_id": 10,
       "odoo_name": "Andrews O. Appiah",
       "odoo_email": "andrewsap@stlghana.com"
     },
-    "Chris": {
-      "odoo_user_id": 8,
-      "odoo_name": "Chris",
+    "Ariel.Engel": {
+      "odoo_user_id": 766,
+      "odoo_name": "Ariel Engel",
+      "odoo_email": "arielen@stlghana.com"
+    },
+    "Arnold.Kodjo.Dorkenoo": {
+      "odoo_user_id": 767,
+      "odoo_name": "Arnold Kodjo Dorkenoo",
+      "odoo_email": "arnolddo@stlghana.com"
+    },
+    "Barbara.Mensah": {
+      "odoo_user_id": 768,
+      "odoo_name": "Barbara Mensah",
+      "odoo_email": "barbarame@stlghana.com"
+    },
+    "Bella.R.Nkansah": {
+      "odoo_user_id": 769,
+      "odoo_name": "Bella R. Nkansah",
+      "odoo_email": "bellank@stlghana.com"
+    },
+    "Benjamin.Adjierteh.Tetteh": {
+      "odoo_user_id": 770,
+      "odoo_name": "Benjamin Adjierteh Tetteh",
+      "odoo_email": "benjaminte@stlghana.com"
+    },
+    "Benjamin.Mensah": {
+      "odoo_user_id": 771,
+      "odoo_name": "Benjamin Mensah",
+      "odoo_email": "benjaminme@stlghana.com"
+    },
+    "Bernice.Sharon.Krampah": {
+      "odoo_user_id": 773,
+      "odoo_name": "Bernice Sharon Krampah",
+      "odoo_email": "bernicekr@stlghana.com"
+    },
+    "Bismark.Kyeremateng": {
+      "odoo_user_id": 774,
+      "odoo_name": "Bismark Kyeremateng",
+      "odoo_email": "bismarkky@cyber-hawk.com"
+    },
+    "Blessing.Ametor.Tsidi": {
+      "odoo_user_id": 775,
+      "odoo_name": "Blessing Ametor Tsidi",
+      "odoo_email": "blessingts@cyber-hawk.com"
+    },
+    "Blessing.Emmnauel.Dogbey": {
+      "odoo_user_id": 809,
+      "odoo_name": "Blessing Emmnauel Dogbey",
+      "odoo_email": "emmanuelbl@stlghana.com"
+    },
+    "Blessing.Obeng": {
+      "odoo_user_id": 776,
+      "odoo_name": "Blessing Obeng",
+      "odoo_email": "blessingob@stlghana.com"
+    },
+    "Bright.Boadi": {
+      "odoo_user_id": 777,
+      "odoo_name": "Bright Boadi",
+      "odoo_email": "brightbo@stlghana.com"
+    },
+    "Bryan.Danquah": {
+      "odoo_user_id": 778,
+      "odoo_name": "Bryan Danquah",
+      "odoo_email": "bryanda@stlghana.com"
+    },
+    "Caleb.Maaninyo.Tettey": {
+      "odoo_user_id": 779,
+      "odoo_name": "Caleb Maaninyo Tettey",
+      "odoo_email": "CalebTe@stlghana.com"
+    },
+    "Charles.Amoo": {
+      "odoo_user_id": 780,
+      "odoo_name": "Charles Amoo",
+      "odoo_email": "charlesam@stlghana.com"
+    },
+    "Charles.Kwakutse.Melounkpor": {
+      "odoo_user_id": 781,
+      "odoo_name": "Charles Kwakutse Melounkpor",
+      "odoo_email": "charlesme@stlghana.com"
+    },
+    "Charles.Ohene.Asenso": {
+      "odoo_user_id": 782,
+      "odoo_name": "Charles Ohene Asenso",
+      "odoo_email": "charlesas@stlghana.com"
+    },
+    "Chris.Alabi.Bortey": {
+      "odoo_user_id": 928,
+      "odoo_name": "Chris Alabi Bortey",
+      "odoo_email": "chrisal@stlghana.com"
+    },
+    "Chris.Kwaku.Bekor": {
+      "odoo_user_id": 14,
+      "odoo_name": "Chris Kwaku Bekor",
       "odoo_email": "chrisbe@stlghana.com"
     },
-    "Chris.Bekor": {
-      "odoo_user_id": 22,
-      "odoo_name": "Chris Bekor",
-      "odoo_email": "chrisbekor99@gmail.com"
+    "Christopher.Kporheme": {
+      "odoo_user_id": 783,
+      "odoo_name": "Christopher Kporheme",
+      "odoo_email": "christopherkp@stlghana.com"
     },
-    "Daniel.David": {
-      "odoo_user_id": 11,
-      "odoo_name": "Daniel David",
+    "Cleopas.Kwame.Tawiah.Owusu": {
+      "odoo_user_id": 784,
+      "odoo_name": "Cleopas Kwame Tawiah Owusu",
+      "odoo_email": "cleopasow@stlghana.com"
+    },
+    "Daniel.David.Davordzie-Banini": {
+      "odoo_user_id": 12,
+      "odoo_name": "Daniel David Davordzie-Banini",
       "odoo_email": "danielda@stlghana.com"
     },
     "Daniel.Ovdat": {
-      "odoo_user_id": 9,
+      "odoo_user_id": 785,
       "odoo_name": "Daniel Ovdat",
       "odoo_email": "danielov@stlghana.com"
     },
-    "David": {
-      "odoo_user_id": 21,
-      "odoo_name": "David",
-      "odoo_email": "davidas@gmail.com"
+    "Daniel.Tetteh": {
+      "odoo_user_id": 786,
+      "odoo_name": "Daniel Tetteh",
+      "odoo_email": "danielte@stlghana.com"
     },
-    "Dorcas": {
-      "odoo_user_id": 24,
-      "odoo_name": "Dorcas",
+    "Darko.Kezia.Nyarkoa": {
+      "odoo_user_id": 787,
+      "odoo_name": "Darko Kezia Nyarkoa",
+      "odoo_email": "darkony@cyber-hawk.com"
+    },
+    "David.Acquaah": {
+      "odoo_user_id": 788,
+      "odoo_name": "David Acquaah",
+      "odoo_email": "DavidAc@stlghana.com"
+    },
+    "David.Bawsineku": {
+      "odoo_user_id": 789,
+      "odoo_name": "David Bawsineku",
+      "odoo_email": "DavidBa@stlghana.com"
+    },
+    "David.Karl.Dodoo": {
+      "odoo_user_id": 790,
+      "odoo_name": "David Karl Dodoo",
+      "odoo_email": "daviddo@stlghana.com"
+    },
+    "David.Ohene.Djan": {
+      "odoo_user_id": 791,
+      "odoo_name": "David Ohene Djan",
+      "odoo_email": "daviddj@stlghana.com"
+    },
+    "Delasi.Hubert": {
+      "odoo_user_id": 792,
+      "odoo_name": "Delasi Hubert",
+      "odoo_email": "hubertda@stlghana.com"
+    },
+    "Derek.Amewuga": {
+      "odoo_user_id": 793,
+      "odoo_name": "Derek Amewuga",
+      "odoo_email": "derekam@cyber-hawk.com"
+    },
+    "Dorcas.Annan": {
+      "odoo_user_id": 794,
+      "odoo_name": "Dorcas Annan",
       "odoo_email": "dorcasan@stlghana.com"
     },
-    "Edith": {
-      "odoo_user_id": 26,
-      "odoo_name": "Edith",
+    "Edith.Selase.Ahorlu": {
+      "odoo_user_id": 796,
+      "odoo_name": "Edith Selase Ahorlu",
       "odoo_email": "edithse@stlghana.com"
     },
-    "Felicia": {
-      "odoo_user_id": 25,
-      "odoo_name": "Felicia",
+    "Edna.Mintaa.Bour": {
+      "odoo_user_id": 797,
+      "odoo_name": "Edna Mintaa Bour",
+      "odoo_email": "ednabo@cyber-hawk.com"
+    },
+    "Edward.Amartey.Odonkor": {
+      "odoo_user_id": 798,
+      "odoo_name": "Edward Amartey Odonkor",
+      "odoo_email": "edwardod@stlghana.com"
+    },
+    "Edward.Kavi": {
+      "odoo_user_id": 799,
+      "odoo_name": "Edward Kavi",
+      "odoo_email": "edwardka@stlghana.com"
+    },
+    "Elad.Baruch": {
+      "odoo_user_id": 800,
+      "odoo_name": "Elad Baruch",
+      "odoo_email": "elad@stlghana.com"
+    },
+    "Elijah.Kwadwo.Amegbeha": {
+      "odoo_user_id": 801,
+      "odoo_name": "Elijah Kwadwo Amegbeha",
+      "odoo_email": "elijaham@stlghana.com"
+    },
+    "Emmanuel.Afeku": {
+      "odoo_user_id": 802,
+      "odoo_name": "Emmanuel Afeku",
+      "odoo_email": "emmanuelaf@stlghana.com"
+    },
+    "Emmanuel.Boateng": {
+      "odoo_user_id": 803,
+      "odoo_name": "Emmanuel Boateng",
+      "odoo_email": "emmanuelbo@stlghana.com"
+    },
+    "Emmanuel.Effah": {
+      "odoo_user_id": 804,
+      "odoo_name": "Emmanuel Effah",
+      "odoo_email": "emmanuelef@stlghana.com"
+    },
+    "Emmanuel.Kadjani": {
+      "odoo_user_id": 805,
+      "odoo_name": "Emmanuel Kadjani",
+      "odoo_email": "emmanuelka@cyber-hawk.com"
+    },
+    "Emmanuel.Ofori.Oppong": {
+      "odoo_user_id": 806,
+      "odoo_name": "Emmanuel Ofori Oppong",
+      "odoo_email": "emmanuelop@stlghana.com"
+    },
+    "Emmanuel.Yidana": {
+      "odoo_user_id": 807,
+      "odoo_name": "Emmanuel Yidana",
+      "odoo_email": "EmmanuelYi@stlghana.com"
+    },
+    "Emmanuella.Sena.Tettekpe": {
+      "odoo_user_id": 808,
+      "odoo_name": "Emmanuella Sena Tettekpe",
+      "odoo_email": "emmanuellate@stlghana.com"
+    },
+    "Enoch.Amossah": {
+      "odoo_user_id": 810,
+      "odoo_name": "Enoch Amossah",
+      "odoo_email": "enocham@stlghana.com"
+    },
+    "Eric.Jerry.Adjei": {
+      "odoo_user_id": 811,
+      "odoo_name": "Eric Jerry Adjei",
+      "odoo_email": "ericje@stlghana.com"
+    },
+    "Eric.Sarpong": {
+      "odoo_user_id": 812,
+      "odoo_name": "Eric Sarpong",
+      "odoo_email": "ericsa@stlghana.com"
+    },
+    "Eric.Yeboah.Afreh": {
+      "odoo_user_id": 813,
+      "odoo_name": "Eric Yeboah Afreh",
+      "odoo_email": "ericafr@stlghana.com"
+    },
+    "Eugene.Amoanie": {
+      "odoo_user_id": 814,
+      "odoo_name": "Eugene Amoanie",
+      "odoo_email": "eugeneam@stlghana.com"
+    },
+    "Eyal.Barashi": {
+      "odoo_user_id": 815,
+      "odoo_name": "Eyal Barashi",
+      "odoo_email": "eyalba@stlghana.com"
+    },
+    "Faithlord.Diamenu": {
+      "odoo_user_id": 816,
+      "odoo_name": "Faithlord Diamenu",
+      "odoo_email": "faithlorddi@stlghana.com"
+    },
+    "Felicia.Ahiabor": {
+      "odoo_user_id": 927,
+      "odoo_name": "Felicia Ahiabor",
       "odoo_email": "feliciaah@stlghana.com"
     },
-    "Jason": {
-      "odoo_user_id": 19,
-      "odoo_name": "Jason",
+    "Forgive.Agbesi": {
+      "odoo_user_id": 817,
+      "odoo_name": "Forgive Agbesi",
+      "odoo_email": "forgiveag@stlghana.com"
+    },
+    "Gabriel.Kpabitey.Lartey": {
+      "odoo_user_id": 818,
+      "odoo_name": "Gabriel Kpabitey Lartey",
+      "odoo_email": "gabriella@cyber-hawk.com"
+    },
+    "Gavriel.Kadzan": {
+      "odoo_user_id": 819,
+      "odoo_name": "Gavriel Kadzan",
+      "odoo_email": "gavrielka@stlghana.com"
+    },
+    "George.Akoto.Akofante": {
+      "odoo_user_id": 821,
+      "odoo_name": "George Akoto Akofante",
+      "odoo_email": "georgeak@stlghana.com"
+    },
+    "Georgina.Kporbley": {
+      "odoo_user_id": 822,
+      "odoo_name": "Georgina Kporbley",
+      "odoo_email": "georginaan@stlghana.com"
+    },
+    "Gil.Simcha": {
+      "odoo_user_id": 823,
+      "odoo_name": "Gil Simcha",
+      "odoo_email": "gilsi@stlghana.com"
+    },
+    "Guy.Lustikman": {
+      "odoo_user_id": 825,
+      "odoo_name": "Guy Lustikman",
+      "odoo_email": "guylu@stlghana.com"
+    },
+    "Guy.Shmuel": {
+      "odoo_user_id": 826,
+      "odoo_name": "Guy Shmuel",
+      "odoo_email": "guy@stlghana.com"
+    },
+    "Haim.Lewy": {
+      "odoo_user_id": 827,
+      "odoo_name": "Haim Lewy",
+      "odoo_email": "haimle@stlghana.com"
+    },
+    "Hans.Donkor.Kyei": {
+      "odoo_user_id": 828,
+      "odoo_name": "Hans Donkor Kyei",
+      "odoo_email": "hansky@stlghana.com"
+    },
+    "Henry.Atsu.Ziorklui": {
+      "odoo_user_id": 829,
+      "odoo_name": "Henry Atsu  Ziorklui",
+      "odoo_email": "henryzi@stlghana.com"
+    },
+    "Henry.Mawuko.Torkuebu": {
+      "odoo_user_id": 830,
+      "odoo_name": "Henry Mawuko Torkuebu",
+      "odoo_email": "henryto@stlghana.com"
+    },
+    "Hubert.Delasi.Korbla.Dake": {
+      "odoo_user_id": 831,
+      "odoo_name": "Hubert Delasi Korbla Dake",
+      "odoo_email": "HubertDa@stlghana.com"
+    },
+    "Idan.Strulovich": {
+      "odoo_user_id": 832,
+      "odoo_name": "Idan Strulovich",
+      "odoo_email": "idanst@stlghana.com"
+    },
+    "Inon.Bar-Yehuda": {
+      "odoo_user_id": 833,
+      "odoo_name": "Inon Bar-Yehuda",
+      "odoo_email": "inonby@stlghana.com"
+    },
+    "Isaac.Barnor": {
+      "odoo_user_id": 834,
+      "odoo_name": "Isaac Barnor",
+      "odoo_email": "isaacba@stlghana.com"
+    },
+    "Isaac.Kwamina-Poku.Hagan": {
+      "odoo_user_id": 835,
+      "odoo_name": "Isaac Kwamina-Poku Hagan",
+      "odoo_email": "IsaacHa@stlghana.com"
+    },
+    "Issah.Ibrahim": {
+      "odoo_user_id": 930,
+      "odoo_name": "Issah Ibrahim",
+      "odoo_email": "issahib@stlghana.com"
+    },
+    "Jacob.Addo": {
+      "odoo_user_id": 836,
+      "odoo_name": "Jacob Addo",
+      "odoo_email": "jacobad@stlghana.com"
+    },
+    "Jacob.Aidoo": {
+      "odoo_user_id": 837,
+      "odoo_name": "Jacob Aidoo",
+      "odoo_email": "jacobai@cyber-hawk.com"
+    },
+    "Jason.Asamoah": {
+      "odoo_user_id": 922,
+      "odoo_name": "Jason Asamoah",
       "odoo_email": "jasonas@stlghana.com"
     },
-    "Joanita": {
-      "odoo_user_id": 14,
-      "odoo_name": "Joanita",
+    "Jennifer.Teiko.Moncar": {
+      "odoo_user_id": 838,
+      "odoo_name": "Jennifer Teiko Moncar",
+      "odoo_email": "jennifermo@stlghana.com"
+    },
+    "Joanita.Allotey": {
+      "odoo_user_id": 839,
+      "odoo_name": "Joanita Allotey",
       "odoo_email": "joanitaal@stlghana.com"
     },
-    "Joseph": {
-      "odoo_user_id": 20,
-      "odoo_name": "Joseph",
-      "odoo_email": "josephas@gmail.com"
+    "Joseph.Nhyirah.Ewusi": {
+      "odoo_user_id": 840,
+      "odoo_name": "Joseph Nhyirah Ewusi",
+      "odoo_email": "josephew@stlghana.com"
     },
-    "Marc.Demo": {
-      "odoo_user_id": 5,
-      "odoo_name": "Marc Demo",
-      "odoo_email": "demo"
+    "Joseph.Prempeh": {
+      "odoo_user_id": 841,
+      "odoo_name": "Joseph Prempeh",
+      "odoo_email": "JosephPr@stlghana.com"
     },
-    "Salmata": {
-      "odoo_user_id": 23,
-      "odoo_name": "Salmata",
+    "Joshua.Nsiah": {
+      "odoo_user_id": 921,
+      "odoo_name": "Joshua Nsiah",
+      "odoo_email": "joshuans@stlghana.com"
+    },
+    "Jude.Osam-Sackey": {
+      "odoo_user_id": 842,
+      "odoo_name": "Jude Osam-Sackey",
+      "odoo_email": "judeos@stlghana.com"
+    },
+    "Kelvin.Botchway": {
+      "odoo_user_id": 844,
+      "odoo_name": "Kelvin Botchway",
+      "odoo_email": "kelvinbo@cyber-hawk.com"
+    },
+    "Khalid.Kweku.Anderson": {
+      "odoo_user_id": 845,
+      "odoo_name": "Khalid Kweku Anderson",
+      "odoo_email": "khalidan@stlghana.com"
+    },
+    "Kwabena.Yirenkyi.Acheampong": {
+      "odoo_user_id": 846,
+      "odoo_name": "Kwabena Yirenkyi Acheampong",
+      "odoo_email": "kwabenaac@cyber-hawk.com"
+    },
+    "Kwaku.Afreh-Nuamah": {
+      "odoo_user_id": 847,
+      "odoo_name": "Kwaku Afreh-Nuamah",
+      "odoo_email": "kwakuaf@stlghana.com"
+    },
+    "Kwaku.Ampomah": {
+      "odoo_user_id": 848,
+      "odoo_name": "Kwaku Ampomah",
+      "odoo_email": "kwaku.ampomah@agilecapability.com"
+    },
+    "Kwasi.Mintah": {
+      "odoo_user_id": 849,
+      "odoo_name": "Kwasi Mintah",
+      "odoo_email": "kwasiow@stlghana.com"
+    },
+    "Kwesi.Essel": {
+      "odoo_user_id": 850,
+      "odoo_name": "Kwesi Essel",
+      "odoo_email": "kwesies@stlghana.com"
+    },
+    "Levannah.Zarah.Asmah": {
+      "odoo_user_id": 851,
+      "odoo_name": "Levannah Zarah Asmah",
+      "odoo_email": "levannahza@stlghana.com"
+    },
+    "Lior.Ben.Yishay": {
+      "odoo_user_id": 852,
+      "odoo_name": "Lior Ben Yishay",
+      "odoo_email": "liorby@stlghana.com"
+    },
+    "Lior.Ben-Yishay": {
+      "odoo_user_id": 923,
+      "odoo_name": "Lior Ben-Yishay",
+      "odoo_email": "liorbe@stlghana.com"
+    },
+    "Lord.Kofi.Dorkenoo": {
+      "odoo_user_id": 853,
+      "odoo_name": "Lord Kofi Dorkenoo",
+      "odoo_email": "lorddo@stlghana.com"
+    },
+    "Loretta.Asare": {
+      "odoo_user_id": 854,
+      "odoo_name": "Loretta Asare",
+      "odoo_email": "lorettaas@stlghana.com"
+    },
+    "Lotus.Ray.King.Asmah": {
+      "odoo_user_id": 855,
+      "odoo_name": "Lotus Ray King Asmah",
+      "odoo_email": "lotusas@stlghana.com"
+    },
+    "Mabel.Ansong": {
+      "odoo_user_id": 856,
+      "odoo_name": "Mabel Ansong",
+      "odoo_email": "mabelan@cyber-hawk.com"
+    },
+    "Markson.Atiawotse": {
+      "odoo_user_id": 857,
+      "odoo_name": "Markson Atiawotse",
+      "odoo_email": "marksonsy@stlghana.com"
+    },
+    "Martins.Nantwi.Boateng": {
+      "odoo_user_id": 858,
+      "odoo_name": "Martins Nantwi Boateng",
+      "odoo_email": "martinsbo@stlghana.com"
+    },
+    "Michael.Zowonu": {
+      "odoo_user_id": 859,
+      "odoo_name": "Michael Zowonu",
+      "odoo_email": "michaelzo@stlghana.com"
+    },
+    "Moses.Nditsi": {
+      "odoo_user_id": 860,
+      "odoo_name": "Moses Nditsi",
+      "odoo_email": "mosesnd@stlghana.com"
+    },
+    "Naa.Ayele.Norbaatse": {
+      "odoo_user_id": 861,
+      "odoo_name": "Naa Ayele Norbaatse",
+      "odoo_email": "naa.norbaatse@agilecapability.com"
+    },
+    "Naami.Nikoi": {
+      "odoo_user_id": 862,
+      "odoo_name": "Naami Nikoi",
+      "odoo_email": "ict.admin@stlghana.com"
+    },
+    "Nadav.Simhoni": {
+      "odoo_user_id": 863,
+      "odoo_name": "Nadav Simhoni",
+      "odoo_email": "nadav@stlghana.com"
+    },
+    "Nana.Kofi.Adjei-Tetteh": {
+      "odoo_user_id": 864,
+      "odoo_name": "Nana Kofi Adjei-Tetteh",
+      "odoo_email": "nanakofiad@stlghana.com"
+    },
+    "Nathaniel.Mensah.Adamah": {
+      "odoo_user_id": 865,
+      "odoo_name": "Nathaniel Mensah Adamah",
+      "odoo_email": "nathanielada@stlghana.com"
+    },
+    "Obed.Mawuenyega.Katey": {
+      "odoo_user_id": 866,
+      "odoo_name": "Obed Mawuenyega Katey",
+      "odoo_email": "obedka@stlghana.com"
+    },
+    "Obeng.Sabbath": {
+      "odoo_user_id": 867,
+      "odoo_name": "Obeng Sabbath",
+      "odoo_email": "obengsa@stlghana.com"
+    },
+    "Oppong.Yeboah.Junior": {
+      "odoo_user_id": 868,
+      "odoo_name": "Oppong Yeboah Junior",
+      "odoo_email": "yeboahop@cyber-hawk.com"
+    },
+    "Ori.Ben.Shitrit": {
+      "odoo_user_id": 869,
+      "odoo_name": "Ori Ben Shitrit",
+      "odoo_email": "orish@stlghana.com"
+    },
+    "Osei.Assibey-Bonsu": {
+      "odoo_user_id": 870,
+      "odoo_name": "Osei Assibey-Bonsu",
+      "odoo_email": "oseias@stlghana.com"
+    },
+    "Patrick.Kweku-Duah": {
+      "odoo_user_id": 871,
+      "odoo_name": "Patrick Kweku-Duah",
+      "odoo_email": "patrickdu@stlghana.com"
+    },
+    "Philip.Boakye.Asare": {
+      "odoo_user_id": 872,
+      "odoo_name": "Philip Boakye Asare",
+      "odoo_email": "philipas@stlghana.com"
+    },
+    "Philip.Teye.Kabutey": {
+      "odoo_user_id": 873,
+      "odoo_name": "Philip Teye Kabutey",
+      "odoo_email": "philipkab@cyber-hawk.com"
+    },
+    "Project.Only": {
+      "odoo_user_id": 926,
+      "odoo_name": "Project Only",
+      "odoo_email": "test@gmail.com"
+    },
+    "Prosper.Afriyie.Kobla.Tsatsu": {
+      "odoo_user_id": 874,
+      "odoo_name": "Prosper Afriyie Kobla Tsatsu",
+      "odoo_email": "prosperts@cyber-hawk.com"
+    },
+    "Randy.Aduhene": {
+      "odoo_user_id": 875,
+      "odoo_name": "Randy Aduhene",
+      "odoo_email": "randyad@cyber-hawk.com"
+    },
+    "Raymond.Asiedu": {
+      "odoo_user_id": 876,
+      "odoo_name": "Raymond Asiedu",
+      "odoo_email": "raymondas@stlghana.com"
+    },
+    "Razack.Atindana": {
+      "odoo_user_id": 877,
+      "odoo_name": "Razack Atindana",
+      "odoo_email": "razackat@stlghana.com"
+    },
+    "Rebecca.Mintah": {
+      "odoo_user_id": 878,
+      "odoo_name": "Rebecca Mintah",
+      "odoo_email": "rebeccami@stlghana.com"
+    },
+    "Redeemer.Fletchyann": {
+      "odoo_user_id": 879,
+      "odoo_name": "Redeemer Fletchyann",
+      "odoo_email": "redeemerfl@stlghana.com"
+    },
+    "Reuben.B.Ashirifie": {
+      "odoo_user_id": 880,
+      "odoo_name": "Reuben B. Ashirifie",
+      "odoo_email": "reubenas@stlghana.com"
+    },
+    "Richard.Blankson": {
+      "odoo_user_id": 881,
+      "odoo_name": "Richard Blankson",
+      "odoo_email": "richardqu@stlghana.com"
+    },
+    "Richard.Korshie.Chukwuka.Njom": {
+      "odoo_user_id": 882,
+      "odoo_name": "Richard Korshie Chukwuka Njom",
+      "odoo_email": "richardnj@stlghana.com"
+    },
+    "Richard.Nomo": {
+      "odoo_user_id": 883,
+      "odoo_name": "Richard Nomo",
+      "odoo_email": "richardno@stlghana.com"
+    },
+    "Ridwan.Nihad.Kokroko": {
+      "odoo_user_id": 884,
+      "odoo_name": "Ridwan Nihad Kokroko",
+      "odoo_email": "RidwanKo@stlghana.com"
+    },
+    "Rubby.Yankson": {
+      "odoo_user_id": 885,
+      "odoo_name": "Rubby Yankson",
+      "odoo_email": "rubbyya@cyber-hawk.com"
+    },
+    "Salmata.Issah.Abudulai": {
+      "odoo_user_id": 886,
+      "odoo_name": "Salmata Issah Abudulai",
       "odoo_email": "salmataab@stlghana.com"
     },
-    "Seshachala.H.R": {
-      "odoo_user_id": 10,
-      "odoo_name": "Seshachala H.R",
+    "Samuel.Egyir.Gaisie": {
+      "odoo_user_id": 887,
+      "odoo_name": "Samuel Egyir Gaisie",
+      "odoo_email": "samuelga@stlghana.com"
+    },
+    "Samuel.Fosu.Duah": {
+      "odoo_user_id": 888,
+      "odoo_name": "Samuel Fosu Duah",
+      "odoo_email": "samueldu@stlghana.com"
+    },
+    "Selasie.Noah.Galley": {
+      "odoo_user_id": 889,
+      "odoo_name": "Selasie Noah Galley",
+      "odoo_email": "selasiega@stlghana.com"
+    },
+    "Seshachala.Hadonahalli.Ramprakash": {
+      "odoo_user_id": 11,
+      "odoo_name": "Seshachala Hadonahalli Ramprakash",
       "odoo_email": "seshachala.h.r@stlghana.com"
     },
-    "Taufic": {
-      "odoo_user_id": 13,
-      "odoo_name": "Taufic",
-      "odoo_email": "taufic666abdallah@gmail.com"
+    "Seth.Adotey": {
+      "odoo_user_id": 890,
+      "odoo_name": "Seth Adotey",
+      "odoo_email": "sethad@stlghana.com"
     },
-    "taufic": {
-      "odoo_user_id": 7,
-      "odoo_name": "taufic",
-      "odoo_email": "tauficwa@stlghana.com"
+    "Sharon.Fisher": {
+      "odoo_user_id": 891,
+      "odoo_name": "Sharon Fisher",
+      "odoo_email": "sharon@stlghana.com"
+    },
+    "Shulamite.Oware-Buamah": {
+      "odoo_user_id": 920,
+      "odoo_name": "Shulamite Oware-Buamah",
+      "odoo_email": "shulamitebu@stlghana.com"
+    },
+    "Stav.Amrosi": {
+      "odoo_user_id": 892,
+      "odoo_name": "Stav Amrosi",
+      "odoo_email": "stavam@stlghana.com"
+    },
+    "Stephen.Nimo.Eturu": {
+      "odoo_user_id": 893,
+      "odoo_name": "Stephen Nimo Eturu",
+      "odoo_email": "StephenEt@stlghana.com"
+    },
+    "Sylvester.Domfeh": {
+      "odoo_user_id": 894,
+      "odoo_name": "Sylvester Domfeh",
+      "odoo_email": "sylvesterdo@stlghana.com"
+    },
+    "Tester": {
+      "odoo_user_id": 895,
+      "odoo_name": "Tester",
+      "odoo_email": "tester@stlghana.com"
+    },
+    "Thadius.Yamak": {
+      "odoo_user_id": 896,
+      "odoo_name": "Thadius Yamak",
+      "odoo_email": "thadiusya@cyber-hawk.com"
+    },
+    "Theophilus.Addotey": {
+      "odoo_user_id": 897,
+      "odoo_name": "Theophilus Addotey",
+      "odoo_email": "theophilusad@stlghana.com"
+    },
+    "Theophilus.Akowuah": {
+      "odoo_user_id": 898,
+      "odoo_name": "Theophilus Akowuah",
+      "odoo_email": "TheophilusAk@stlghana.com"
+    },
+    "Tomer.Novotny": {
+      "odoo_user_id": 899,
+      "odoo_name": "Tomer Novotny",
+      "odoo_email": "tomerno@stlghana.com"
+    },
+    "Tryphena.Osei-Asante": {
+      "odoo_user_id": 900,
+      "odoo_name": "Tryphena Osei-Asante",
+      "odoo_email": "tryphenaos@stlghana.com"
+    },
+    "William.Martey.Akita": {
+      "odoo_user_id": 901,
+      "odoo_name": "William Martey Akita",
+      "odoo_email": "williamma@stlghana.com"
+    },
+    "Wisdom.Awoye": {
+      "odoo_user_id": 902,
+      "odoo_name": "Wisdom Awoye",
+      "odoo_email": "wisdomaw@stlghana.com"
+    },
+    "Yan.Hagai": {
+      "odoo_user_id": 903,
+      "odoo_name": "Yan Hagai",
+      "odoo_email": "yanha@stlghana.com"
+    },
+    "Yehezkel.Haim.Lipa": {
+      "odoo_user_id": 904,
+      "odoo_name": "Yehezkel Haim Lipa",
+      "odoo_email": "yehezkelli@stlghana.com"
+    },
+    "Yinpang.Debazar": {
+      "odoo_user_id": 905,
+      "odoo_name": "Yinpang Debazar",
+      "odoo_email": "yinpangde@cyber-hawk.com"
+    },
+    "Yoed.Chizik": {
+      "odoo_user_id": 906,
+      "odoo_name": "Yoed Chizik",
+      "odoo_email": "yoedch@stlghana.com"
+    },
+    "Zietonny.Elias.Nii.Ayi.Fares": {
+      "odoo_user_id": 907,
+      "odoo_name": "Zietonny Elias Nii Ayi Fares",
+      "odoo_email": "eliaszi@stlghana.com"
     }
   }
 }

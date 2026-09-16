@@ -37,13 +37,11 @@ from kafka import KafkaConsumer
 
 load_dotenv()  # reads .env in the current working directory
 
-# ---------------------------------------------------------------------------
 # Config
-# ---------------------------------------------------------------------------
 
 KAFKA_BOOTSTRAP_SERVERS = os.environ.get("KAFKA_BOOTSTRAP_SERVERS", "192.168.251.152:9094")
 KAFKA_TOPIC = "tickets"
-KAFKA_GROUP_ID = "odoo-ticket-sync"                # NEVER reuse fcmv4
+KAFKA_GROUP_ID = "odoo-ticket-sync"                
 KAFKA_AUTO_OFFSET_RESET = "earliest"               # 'latest' once you've caught up historically
 
 ODOO_URL = os.environ["ODOO_URL"]
@@ -51,10 +49,16 @@ ODOO_DB = os.environ["ODOO_DB"]
 ODOO_USERNAME = os.environ["ODOO_USERNAME"]
 ODOO_API_KEY = os.environ["ODOO_API_KEY"]
 
-ODOO_PROJECT_NAME = "Kraken"   # fixed target project for all Kraken-synced tasks
+# Maps Kraken adminGroup to a specific Odoo Project Name
+PROJECT_MAP = {
+    "IT SUPPORT": "Kraken - IT&DC",
+    "APPLICATIONS": "Kraken - Application",
+}
+DEFAULT_PROJECT_NAME = "Kraken Testing"  # Fallback if adminGroup isn't in PROJECT_MAP
 
 DEPARTMENT_MAPPING_FILE = "admin_group_to_odoo_department.json"
-IDEMPOTENCY_DB_FILE = "kraken_odoo_sync.db"
+IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", "kraken_odoo_sync.db")
+LOG_FILE = os.environ.get("LOG_FILE_PATH", "sync.log")
 
 ADMIN_GROUP_JSON_KEY = "adminGroup"   # TODO: confirm real key name from a live message
 
@@ -65,6 +69,18 @@ PRIORITY_MAP = {
     "MEDIUM": "1",
     "LOW": "0",
 }
+
+# Maps Kraken ticket status to Odoo Kanban stage_id
+STATUS_TO_STAGE_MAP = {
+    "OPEN": 1,             # Backlog
+    "ASSIGNED": 2,         # Planned for Sprint
+    "IN_PROGRESS": 3,      # In Progress
+    "ON_HOLD": 4,          # On Hold
+    "PENDING": 4,          # On Hold
+    "RESOLVED": 5,         # Done
+    "CLOSED": 5,           # Done
+}
+
 ISSUE_TYPE_MAPPING_FILE = "ticket_type_to_odoo_issue_type.json"
 REQUESTOR_TYPE_DEFAULT = "external"  # TODO: confirm valid selection value - Kraken tickets are all external
 
@@ -84,23 +100,35 @@ USER_MAP = load_user_mapping()
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s",
-    handlers=[logging.FileHandler("sync.log"), logging.StreamHandler()],
+    handlers=[logging.FileHandler(LOG_FILE), logging.StreamHandler()],
 )
 log = logging.getLogger("kraken_odoo_sync")
 
 
-# ---------------------------------------------------------------------------
 # Idempotency store (sqlite - kraken ticket id -> odoo task id)
-# ---------------------------------------------------------------------------
 
 def init_db():
     conn = sqlite3.connect(IDEMPOTENCY_DB_FILE)
     conn.execute(
-        """CREATE TABLE IF NOT EXISTS ticket_map (
-               kraken_id TEXT PRIMARY KEY,
-               odoo_task_id INTEGER NOT NULL,
-               last_status TEXT
-           )"""
+        """
+        CREATE TABLE IF NOT EXISTS ticket_map (
+            kraken_id TEXT PRIMARY KEY,
+            odoo_task_id INTEGER,
+            last_status TEXT,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """
+    )
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS failed_tickets (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            kraken_id TEXT,
+            payload TEXT,
+            error_message TEXT,
+            failed_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """
     )
     conn.commit()
     return conn
@@ -115,17 +143,24 @@ def get_mapped_task_id(conn, kraken_id: str):
 
 def save_mapping(conn, kraken_id: str, odoo_task_id: int, status: str):
     conn.execute(
-        "INSERT INTO ticket_map (kraken_id, odoo_task_id, last_status) VALUES (?, ?, ?) "
-        "ON CONFLICT(kraken_id) DO UPDATE SET odoo_task_id=excluded.odoo_task_id, "
-        "last_status=excluded.last_status",
+        """INSERT INTO ticket_map (kraken_id, odoo_task_id, last_status)
+           VALUES (?, ?, ?)
+           ON CONFLICT(kraken_id) DO UPDATE SET
+               odoo_task_id=excluded.odoo_task_id,
+               last_status=excluded.last_status""",
         (kraken_id, odoo_task_id, status),
     )
     conn.commit()
 
+def save_failed_ticket(conn, kraken_id: str, payload: dict, error_message: str):
+    conn.execute(
+        "INSERT INTO failed_tickets (kraken_id, payload, error_message) VALUES (?, ?, ?)",
+        (kraken_id, json.dumps(payload), error_message),
+    )
+    conn.commit()
 
-# ---------------------------------------------------------------------------
+
 # Odoo connection
-# ---------------------------------------------------------------------------
 
 class OdooClient:
     def __init__(self):
@@ -134,20 +169,21 @@ class OdooClient:
         if not self.uid:
             raise RuntimeError("Odoo authentication failed - check ODOO_* env vars")
         self.models = xmlrpc.client.ServerProxy(f"{ODOO_URL}/xmlrpc/2/object", allow_none=True)
-        self._project_id_cache = None
+        self._project_id_cache = {}  # { project_name: project_id }
         self._department_id_cache = {}
         self._issue_type_id_cache = {}
 
-    def _execute(self, model, method, *args):
-        return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+    def _execute(self, model, method, *args, **kwargs):
+        return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
 
-    def get_project_id(self):
-        if self._project_id_cache is None:
-            ids = self._execute("project.project", "search", [("name", "=", ODOO_PROJECT_NAME)])
-            if not ids:
-                raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
-            self._project_id_cache = ids[0]
-        return self._project_id_cache
+    def get_project_id(self, project_name: str) -> int:
+        if project_name in self._project_id_cache:
+            return self._project_id_cache[project_name]
+        ids = self._execute("project.project", "search", [("name", "=", project_name)])
+        if not ids:
+            raise ValueError(f"Project '{project_name}' not found in Odoo")
+        self._project_id_cache[project_name] = ids[0]
+        return ids[0]
 
     def get_department_id(self, department_name: str):
         if department_name in self._department_id_cache:
@@ -172,9 +208,7 @@ class OdooClient:
         self._execute("project.task", "write", [task_id], values)
 
 
-# ---------------------------------------------------------------------------
 # Transform: Kraken ticketDTO -> Odoo project.task fields
-# ---------------------------------------------------------------------------
 
 def epoch_to_odoo_datetime(epoch_seconds) -> str | bool:
     if not epoch_seconds:
@@ -230,10 +264,12 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
     if ticket.get("solution"):
         description_parts.append(f"<p><b>Solution:</b> {ticket['solution']}</p>")
 
+    target_project_name = PROJECT_MAP.get(admin_group, DEFAULT_PROJECT_NAME)
+
     values = {
         "name": f"[{ticket.get('serviceRecordNumber')}] {(ticket.get('description') or '')[:80]}",
         "description": "".join(description_parts),
-        "project_id": odoo.get_project_id(),
+        "project_id": odoo.get_project_id(target_project_name),
         "date_deadline": epoch_to_odoo_datetime(ticket.get("dueDate")),
         "date_start": epoch_to_odoo_datetime(ticket.get("createdTime")),
         "x_department_id": department_id,
@@ -246,13 +282,15 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
         values["x_assignee_id"] = assignee_id
     if reporter_id:
         values["x_reporter_id"] = reporter_id
+        
+    stage_id = STATUS_TO_STAGE_MAP.get(ticket.get("status"))
+    if stage_id:
+        values["stage_id"] = stage_id
 
     return values
 
 
-# ---------------------------------------------------------------------------
 # Main consume loop
-# ---------------------------------------------------------------------------
 
 def extract_ticket_dto(raw_value: dict) -> dict:
     """Handle both a wrapped envelope ({"ticketDTO": {...}}) and a raw payload."""
@@ -286,6 +324,10 @@ def run():
             existing_task_id = get_mapped_task_id(conn, kraken_id)
 
             if existing_task_id:
+                # Odoo Quirk: Sending project_id during an update forces Odoo to reset 
+                # the task to the default 'Backlog' stage. We remove it for updates!
+                odoo_fields.pop("project_id", None)
+                
                 odoo.update_task(existing_task_id, odoo_fields)
                 save_mapping(conn, kraken_id, existing_task_id, status)
                 log.info("Updated Odoo task %s for ticket %s (status=%s)", existing_task_id, kraken_id, status)
@@ -294,9 +336,17 @@ def run():
                 save_mapping(conn, kraken_id, new_task_id, status)
                 log.info("Created Odoo task %s for ticket %s", new_task_id, kraken_id)
 
-        except Exception:
+        except Exception as e:
             log.exception("Failed to process message at offset %s", message.offset)
-            # TODO: push to a dead-letter file/topic instead of just logging
+            # Dead Letter Queue: Save failed tickets so they aren't permanently lost
+            kraken_id = None
+            try:
+                ticket_data = extract_ticket_dto(message.value)
+                kraken_id = str(ticket_data.get("id"))
+            except Exception:
+                pass
+            
+            save_failed_ticket(conn, kraken_id, message.value, str(e))
 
 
 if __name__ == "__main__":

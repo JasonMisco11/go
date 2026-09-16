@@ -1099,3 +1099,1162 @@ TypeError: cannot marshal None unless allow_none is enabled
 2026-09-15 17:40:42,557 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
 2026-09-15 17:45:42,814 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
 2026-09-15 17:50:43,009 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 17:55:43,251 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 17:57:48,505 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-15 17:57:48,674 INFO Updated Odoo task 495 for ticket 3 (status=OPEN)
+2026-09-15 17:57:53,511 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-15 17:57:53,657 INFO Updated Odoo task 495 for ticket 3 (status=RESOLVED)
+2026-09-15 18:00:43,381 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:05:43,618 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:09:53,087 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-15 18:09:53,862 INFO Updated Odoo task 495 for ticket 3 (status=IN_PROGRESS)
+2026-09-15 18:09:58,118 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-15 18:09:59,054 INFO Updated Odoo task 495 for ticket 3 (status=RESOLVED)
+2026-09-15 18:10:43,814 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:15:44,168 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:20:44,233 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:24:14,525 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-15 18:24:14,526 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-15 18:24:14,526 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-15 18:24:14,530 INFO <KafkaTCPTransport [::1:9094<-63396]>: connected to <socket.socket fd=1304, family=23, type=1, proto=0, laddr=('::1', 63396, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 18:24:14,535 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-63396] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-15 18:24:14,535 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-63396] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 18:24:14,541 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 18:24:14,542 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-15 18:24:14,542 INFO Closing bootstrap connection bootstrap-0
+2026-09-15 18:24:14,542 INFO <KafkaTCPTransport [::1:9094<-63396]>: Closing transport
+2026-09-15 18:24:14,542 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 18:24:14,543 INFO Starting metadata refresh loop
+2026-09-15 18:24:14,544 INFO Updating subscribed topics to: ('tickets',)
+2026-09-15 18:24:14,545 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-15 18:24:14,546 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-15 18:24:14,547 INFO <KafkaTCPTransport [::1:9094<-63397]>: connected to <socket.socket fd=1252, family=23, type=1, proto=0, laddr=('::1', 63397, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 18:24:14,552 INFO <KafkaConnection node_id=1 host=[::1:9094<-63397] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 18:24:14,556 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 18:24:14,556 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 18:24:14,556 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 18:24:14,558 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-15 18:24:14,558 INFO <KafkaTCPTransport [::1:9094<-63398]>: connected to <socket.socket fd=1316, family=23, type=1, proto=0, laddr=('::1', 63398, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 18:24:14,558 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 18:24:14,565 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-63398] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 18:24:14,576 INFO Received member id kafka-python-3.0.11-cb691952-3068-4b80-a306-0bcfbc9e9a29 for group odoo-ticket-sync; will retry join-group
+2026-09-15 18:24:14,577 INFO (Re-)joining group odoo-ticket-sync
+2026-09-15 18:24:14,654 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:24:45,563 INFO Successfully joined group odoo-ticket-sync <Generation 7 (member_id: kafka-python-3.0.11-cb691952-3068-4b80-a306-0bcfbc9e9a29, protocol: range)>
+2026-09-15 18:24:45,564 INFO Elected group leader -- performing partition assignments using range
+2026-09-15 18:24:45,569 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 18:24:45,576 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-15 18:24:45,576 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-15 18:24:45,726 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 18:24:45,828 ERROR Failed to process message at offset 55
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description [UPDATED]' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-15 18:24:45,834 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-15 18:24:45,896 ERROR Failed to process message at offset 56
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description [UPDATED]' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-15 18:29:45,831 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:32:22,131 INFO Closing idle connection to node coordinator-1
+2026-09-15 20:32:22,131 INFO <KafkaTCPTransport [::1:9094<-63398]>: Closing transport
+2026-09-15 20:32:22,132 INFO <KafkaConnection node_id=coordinator-1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-15 20:32:22,133 WARNING Heartbeat session expired, marking coordinator dead
+2026-09-15 20:32:22,133 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: Heartbeat session expired.
+2026-09-15 20:32:22,142 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:32:22,145 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-15 20:32:22,146 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-15 20:32:22,146 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-15 20:32:22,148 INFO <KafkaTCPTransport [::1:9094<-51142]>: connected to <socket.socket fd=1316, family=23, type=1, proto=0, laddr=('::1', 51142, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-15 20:32:22,182 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-51142] broker_version=(3, 9) (connected)>: Connected
+2026-09-15 20:37:22,209 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:42:24,237 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:47:24,697 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:52:24,958 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 20:57:25,259 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:02:25,576 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:07:25,999 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:12:26,427 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:17:26,897 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:22:27,332 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:27:27,719 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:32:27,818 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:37:28,251 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:42:28,621 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:47:28,629 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:52:29,071 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 21:57:29,546 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:02:30,013 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:07:30,498 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:12:30,873 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:17:31,313 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:22:31,755 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:27:32,160 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-15 22:32:32,500 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:33:40,629 WARNING <KafkaConnection node_id=1 host=[::1:9094<-63397] broker_version=(3, 9) (connected)>: Request timed out after 29999 ms. Closing connection.
+2026-09-16 00:33:40,665 ERROR <KafkaTCPTransport [::1:9094<-63397]>: Abort ([Error 7] RequestTimedOutError: Request timed out after 29999 ms)
+2026-09-16 00:33:40,666 ERROR <KafkaConnection node_id=1 broker_version=(3, 9) (disconnected)>: Connection lost: [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 00:33:40,693 ERROR Fetch to node 1 failed: [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 00:33:40,694 INFO Closing idle connection to node coordinator-1
+2026-09-16 00:33:40,694 INFO <KafkaTCPTransport [::1:9094<-51142]>: Closing transport
+2026-09-16 00:33:40,695 INFO <KafkaConnection node_id=coordinator-1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 00:33:40,697 WARNING Heartbeat session expired, marking coordinator dead
+2026-09-16 00:33:40,698 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: Heartbeat session expired.
+2026-09-16 00:33:40,699 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 00:33:40,778 INFO <KafkaTCPTransport [::1:9094<-63693]>: connected to <socket.socket fd=1528, family=23, type=1, proto=0, laddr=('::1', 63693, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 00:33:41,615 INFO <KafkaConnection node_id=1 host=[::1:9094<-63693] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 00:33:41,617 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:33:41,668 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 00:33:41,670 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 00:33:41,672 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 00:33:41,674 INFO <KafkaTCPTransport [::1:9094<-64354]>: connected to <socket.socket fd=1720, family=23, type=1, proto=0, laddr=('::1', 64354, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 00:33:42,161 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-64354] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 00:38:41,686 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:38:42,955 WARNING Task <kafka.net.selector.Task object at 0x0000021ABA678F50> ran for 1.268s (>0.100s threshold). It is blocking the event loop -- likely a tight sync loop inside a coroutine. Other pollers will time out.
+2026-09-16 00:43:41,144 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:43:41,324 WARNING Task <kafka.net.selector.Task object at 0x0000021ABA678F50> ran for 0.180s (>0.100s threshold). It is blocking the event loop -- likely a tight sync loop inside a coroutine. Other pollers will time out.
+2026-09-16 00:48:41,493 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:53:41,877 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 00:58:42,273 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:03:42,713 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:08:43,166 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:13:43,475 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:18:43,839 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:23:44,190 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:28:44,486 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:33:44,839 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:38:45,210 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:43:45,558 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:48:45,915 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:53:46,277 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 01:58:46,651 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:03:46,951 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:08:47,331 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:13:47,529 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:18:47,873 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:23:48,212 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 02:28:48,515 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:34:47,757 WARNING <KafkaConnection node_id=1 host=[::1:9094<-63693] broker_version=(3, 9) (connected)>: Request timed out after 29999 ms. Closing connection.
+2026-09-16 04:34:47,784 ERROR <KafkaTCPTransport [::1:9094<-63693]>: Abort ([Error 7] RequestTimedOutError: Request timed out after 29999 ms)
+2026-09-16 04:34:47,824 ERROR <KafkaConnection node_id=1 broker_version=(3, 9) (disconnected)>: Connection lost: [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 04:34:47,842 ERROR Fetch to node 1 failed: [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 04:34:47,851 INFO Closing idle connection to node coordinator-1
+2026-09-16 04:34:47,859 INFO <KafkaTCPTransport [::1:9094<-64354]>: Closing transport
+2026-09-16 04:34:47,877 INFO <KafkaConnection node_id=coordinator-1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 04:34:47,883 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 04:34:47,889 WARNING Heartbeat session expired, marking coordinator dead
+2026-09-16 04:34:47,889 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: Heartbeat session expired.
+2026-09-16 04:34:47,908 INFO <KafkaTCPTransport [::1:9094<-55789]>: connected to <socket.socket fd=1720, family=23, type=1, proto=0, laddr=('::1', 55789, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 04:34:48,095 INFO <KafkaConnection node_id=1 host=[::1:9094<-55789] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 04:34:48,100 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:34:48,120 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 04:34:48,121 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 04:34:48,121 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 04:34:48,258 WARNING Task <kafka.net.selector.Task object at 0x0000021ABA71D400> ran for 0.137s (>0.100s threshold). It is blocking the event loop -- likely a tight sync loop inside a coroutine. Other pollers will time out.
+2026-09-16 04:34:48,260 INFO <KafkaTCPTransport [::1:9094<-55797]>: connected to <socket.socket fd=1756, family=23, type=1, proto=0, laddr=('::1', 55797, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 04:34:48,856 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-55797] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 04:39:48,593 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:44:48,570 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:49:48,710 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:54:49,142 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 04:59:49,541 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:04:49,950 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:09:50,313 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:14:50,722 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:19:51,157 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:24:51,547 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:29:51,942 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:34:52,369 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:39:52,770 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:44:53,238 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:49:53,722 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:54:54,209 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 05:59:54,537 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:04:54,881 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:09:55,249 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:14:55,555 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:19:55,930 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:24:56,298 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:29:56,620 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:56:44,794 WARNING <KafkaConnection node_id=1 host=[::1:9094<-55789] broker_version=(3, 9) (connected)>: Request timed out after 29999 ms. Closing connection.
+2026-09-16 06:56:44,794 ERROR <KafkaTCPTransport [::1:9094<-55789]>: Abort ([Error 7] RequestTimedOutError: Request timed out after 29999 ms)
+2026-09-16 06:56:44,795 ERROR <KafkaConnection node_id=1 broker_version=(3, 9) (disconnected)>: Connection lost: [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 06:56:44,795 INFO Closing idle connection to node coordinator-1
+2026-09-16 06:56:44,795 INFO <KafkaTCPTransport [::1:9094<-55797]>: Closing transport
+2026-09-16 06:56:44,796 INFO <KafkaConnection node_id=coordinator-1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 06:56:44,796 WARNING Heartbeat session expired, marking coordinator dead
+2026-09-16 06:56:44,796 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: Heartbeat session expired.
+2026-09-16 06:56:44,797 ERROR Metadata refresh: failed [Error 7] RequestTimedOutError: Request timed out after 29999 ms
+2026-09-16 06:56:44,797 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 06:56:44,799 INFO <KafkaTCPTransport [::1:9094<-58457]>: connected to <socket.socket fd=1720, family=23, type=1, proto=0, laddr=('::1', 58457, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 06:56:44,879 INFO <KafkaConnection node_id=1 host=[::1:9094<-58457] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 06:56:45,353 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 06:56:45,353 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 06:56:45,354 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 06:56:45,355 INFO <KafkaTCPTransport [::1:9094<-58463]>: connected to <socket.socket fd=1932, family=23, type=1, proto=0, laddr=('::1', 58463, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 06:56:45,361 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 06:56:45,395 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-58463] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 07:01:45,692 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:06:45,605 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:11:45,814 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:16:46,011 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:21:46,195 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:26:46,395 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:31:46,586 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:36:46,784 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:41:46,966 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:46:47,185 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:51:47,333 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 07:56:47,550 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:01:47,865 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:06:48,142 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:11:48,340 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:16:48,563 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:21:48,753 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:26:48,947 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:31:49,112 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:36:49,286 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:41:49,485 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:46:49,643 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:51:49,865 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 08:56:50,084 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 09:49:07,834 INFO Closing idle connection to node coordinator-1
+2026-09-16 09:49:07,850 INFO <KafkaTCPTransport [::1:9094<-58463]>: Closing transport
+2026-09-16 09:49:07,851 INFO <KafkaConnection node_id=coordinator-1 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 09:49:07,858 WARNING Heartbeat session expired, marking coordinator dead
+2026-09-16 09:49:07,862 WARNING Marking the coordinator dead (node coordinator-1) for group odoo-ticket-sync: Heartbeat session expired.
+2026-09-16 09:49:07,947 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 09:49:07,958 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 09:49:07,963 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 09:49:07,967 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 09:49:07,977 INFO <KafkaTCPTransport [::1:9094<-61688]>: connected to <socket.socket fd=1592, family=23, type=1, proto=0, laddr=('::1', 61688, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 09:49:08,227 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-61688] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 09:54:08,074 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 09:59:07,846 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:04:08,169 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:09:08,403 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:09:19,669 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-16 10:09:19,782 INFO Updated Odoo task 495 for ticket 3 (status=OPEN)
+2026-09-16 10:09:24,572 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-16 10:09:24,638 ERROR Failed to process message at offset 58
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:14:08,704 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:17:44,451 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:17:44,507 ERROR Failed to process message at offset 59
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "Task '[80002] Sample incident #2 description' requires Effort Estimation before moving to 'In Progress'.">
+2026-09-16 10:17:49,456 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:17:49,528 ERROR Failed to process message at offset 60
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80002] Sample incident #2 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:19:08,999 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:23:32,620 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-16 10:23:32,665 ERROR Failed to process message at offset 61
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "Task '[80003] Sample incident #3 description' requires Effort Estimation before moving to 'In Progress'.">
+2026-09-16 10:23:37,630 WARNING No Odoo user mapped for assignedTo='Aisha.Frimpong'
+2026-09-16 10:23:37,699 ERROR Failed to process message at offset 62
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:24:09,419 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:29:09,532 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:32:20,058 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:32:20,270 INFO Updated Odoo task 495 for ticket 3 (status=OPEN)
+2026-09-16 10:32:24,897 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:32:25,061 ERROR Failed to process message at offset 64
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    self._project_id_cache = ids[0]
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    conn.execute(
+               ^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:34:09,633 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:39:09,951 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:39:50,318 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-16 10:39:50,386 ERROR Failed to process message at offset 65
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    # TODO: push to a dead-letter file/topic instead of just logging
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    if not epoch_seconds:
+        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:39:55,325 WARNING No Odoo user mapped for assignedTo='Andy.Appiah'
+2026-09-16 10:39:55,389 ERROR Failed to process message at offset 66
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 309, in run
+    # TODO: push to a dead-letter file/topic instead of just logging
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 184, in update_task
+    if not epoch_seconds:
+        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 154, in _execute
+    raise RuntimeError(f"Odoo project '{ODOO_PROJECT_NAME}' not found")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:42:37,590 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-16 10:42:37,590 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-16 10:42:37,590 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-16 10:42:37,595 INFO <KafkaTCPTransport [::1:9094<-57950]>: connected to <socket.socket fd=1148, family=23, type=1, proto=0, laddr=('::1', 57950, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 10:42:37,600 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-57950] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-16 10:42:37,600 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-57950] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 10:42:37,607 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 10:42:37,607 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 10:42:37,607 INFO Closing bootstrap connection bootstrap-0
+2026-09-16 10:42:37,607 INFO <KafkaTCPTransport [::1:9094<-57950]>: Closing transport
+2026-09-16 10:42:37,608 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 10:42:37,608 INFO Starting metadata refresh loop
+2026-09-16 10:42:37,609 INFO Updating subscribed topics to: ('tickets',)
+2026-09-16 10:42:37,610 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-16 10:42:37,611 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 10:42:37,612 INFO <KafkaTCPTransport [::1:9094<-57951]>: connected to <socket.socket fd=1148, family=23, type=1, proto=0, laddr=('::1', 57951, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 10:42:37,616 INFO <KafkaConnection node_id=1 host=[::1:9094<-57951] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 10:42:37,621 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 10:42:37,621 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 10:42:37,621 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 10:42:37,623 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-16 10:42:37,623 INFO <KafkaTCPTransport [::1:9094<-57952]>: connected to <socket.socket fd=1336, family=23, type=1, proto=0, laddr=('::1', 57952, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 10:42:37,623 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 10:42:37,627 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-57952] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 10:42:37,642 INFO Received member id kafka-python-3.0.11-a956f95b-89d0-488c-8b1e-5345c49fb55b for group odoo-ticket-sync; will retry join-group
+2026-09-16 10:42:37,643 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 10:42:37,720 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:42:50,579 INFO Successfully joined group odoo-ticket-sync <Generation 8 (member_id: kafka-python-3.0.11-a956f95b-89d0-488c-8b1e-5345c49fb55b, protocol: range)>
+2026-09-16 10:42:50,580 INFO Elected group leader -- performing partition assignments using range
+2026-09-16 10:42:50,585 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:42:50,592 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-16 10:42:50,592 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-16 10:42:55,356 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:42:55,454 ERROR Failed to process message at offset 67
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:43:00,271 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 10:43:00,321 ERROR Failed to process message at offset 68
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 10:47:51,016 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:52:51,137 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 10:57:51,209 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:02:51,400 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:07:51,511 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:12:51,638 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:17:51,780 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:22:51,936 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:27:51,953 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:32:52,397 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:37:52,518 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:42:52,565 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:47:52,615 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:50:04,414 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 11:50:04,470 ERROR Failed to process message at offset 69
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    def update_task(self, task_id: int, values: dict):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    def _execute(self, model, method, *args):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "Task '[80003] Sample incident #3 description' requires Effort Estimation before moving to 'In Progress'.">
+2026-09-16 11:50:09,344 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 11:50:09,411 ERROR Failed to process message at offset 70
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    def update_task(self, task_id: int, values: dict):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    def _execute(self, model, method, *args):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 11:52:38,270 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 11:52:38,328 ERROR Failed to process message at offset 71
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    def update_task(self, task_id: int, values: dict):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    def _execute(self, model, method, *args):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 11:52:43,279 WARNING No Odoo user mapped for assignedTo='supertech_erp'
+2026-09-16 11:52:43,354 ERROR Failed to process message at offset 72
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    def update_task(self, task_id: int, values: dict):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    def _execute(self, model, method, *args):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 11:52:52,917 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 11:54:39,141 WARNING No Odoo user mapped for assignedTo='Jason Asamoah'
+2026-09-16 11:54:39,263 INFO Updated Odoo task 495 for ticket 3 (status=OPEN)
+2026-09-16 11:54:44,146 WARNING No Odoo user mapped for assignedTo='Jason Asamoah'
+2026-09-16 11:54:44,212 ERROR Failed to process message at offset 74
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 322, in run
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 201, in update_task
+    def update_task(self, task_id: int, values: dict):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 171, in _execute
+    def _execute(self, model, method, *args):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: "You cannot move task '[80003] Sample incident #3 description' to stage 'Done' without logging timesheet hours on this task.\n\nPlease add timesheet entries (hours > 0) while working on the task, then move it to Done.">
+2026-09-16 11:57:53,253 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:02:53,399 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:07:53,569 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:17:28,114 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-16 12:17:28,115 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-16 12:17:28,115 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-16 12:17:28,120 INFO <KafkaTCPTransport [::1:9094<-60597]>: connected to <socket.socket fd=1316, family=23, type=1, proto=0, laddr=('::1', 60597, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 12:17:28,247 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-60597] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-16 12:17:28,247 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-60597] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 12:17:28,254 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 12:17:28,254 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 12:17:28,254 INFO Closing bootstrap connection bootstrap-0
+2026-09-16 12:17:28,254 INFO <KafkaTCPTransport [::1:9094<-60597]>: Closing transport
+2026-09-16 12:17:28,254 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 12:17:28,255 INFO Starting metadata refresh loop
+2026-09-16 12:17:28,257 INFO Updating subscribed topics to: ('tickets',)
+2026-09-16 12:17:28,257 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-16 12:17:28,258 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 12:17:28,259 INFO <KafkaTCPTransport [::1:9094<-60598]>: connected to <socket.socket fd=1132, family=23, type=1, proto=0, laddr=('::1', 60598, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 12:17:28,272 INFO <KafkaConnection node_id=1 host=[::1:9094<-60598] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 12:17:28,295 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 12:17:28,296 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 12:17:28,296 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 12:17:28,297 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-16 12:17:28,298 INFO <KafkaTCPTransport [::1:9094<-60599]>: connected to <socket.socket fd=1316, family=23, type=1, proto=0, laddr=('::1', 60599, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 12:17:28,298 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 12:17:28,305 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-60599] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 12:17:28,332 INFO Received member id kafka-python-3.0.11-29a2ab26-41b2-4fa3-b233-e03a1c8d57ab for group odoo-ticket-sync; will retry join-group
+2026-09-16 12:17:28,332 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 12:17:28,369 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:17:31,371 INFO Successfully joined group odoo-ticket-sync <Generation 10 (member_id: kafka-python-3.0.11-29a2ab26-41b2-4fa3-b233-e03a1c8d57ab, protocol: range)>
+2026-09-16 12:17:31,371 INFO Elected group leader -- performing partition assignments using range
+2026-09-16 12:17:31,377 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:17:31,398 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-16 12:17:31,398 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-16 12:17:45,991 WARNING No Odoo user mapped for assignedTo='shulamitebu@stlghana.com'
+2026-09-16 12:17:46,153 ERROR Failed to process message at offset 75
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 323, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 202, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 172, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task.type(103,), User: 14)'>
+2026-09-16 12:17:50,598 WARNING No Odoo user mapped for assignedTo='shulamitebu@stlghana.com'
+2026-09-16 12:17:50,832 ERROR Failed to process message at offset 76
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 323, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 202, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 172, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task.type(107,), User: 14)'>
+2026-09-16 12:22:31,822 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:22:32,030 WARNING Task <kafka.net.selector.Task object at 0x0000019D405BCE60> ran for 0.207s (>0.100s threshold). It is blocking the event loop -- likely a tight sync loop inside a coroutine. Other pollers will time out.
+2026-09-16 12:27:31,884 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:32:31,919 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:37:31,946 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:42:32,368 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:47:32,482 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:52:32,508 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 12:57:32,845 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:02:33,290 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:07:33,727 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:12:34,156 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:17:34,262 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:22:34,665 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:27:35,058 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:32:35,498 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:37:35,936 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:42:36,374 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:47:36,701 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:52:36,716 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 13:57:38,610 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 14:41:12,305 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-16 14:41:12,306 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-16 14:41:12,306 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-16 14:41:12,311 INFO <KafkaTCPTransport [::1:9094<-54282]>: connected to <socket.socket fd=1296, family=23, type=1, proto=0, laddr=('::1', 54282, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 14:41:12,352 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-54282] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-16 14:41:12,353 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-54282] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 14:41:12,361 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 14:41:12,362 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 14:41:12,362 INFO Closing bootstrap connection bootstrap-0
+2026-09-16 14:41:12,362 INFO <KafkaTCPTransport [::1:9094<-54282]>: Closing transport
+2026-09-16 14:41:12,363 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 14:41:12,363 INFO Starting metadata refresh loop
+2026-09-16 14:41:12,365 INFO Updating subscribed topics to: ('tickets',)
+2026-09-16 14:41:12,365 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-16 14:41:12,366 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 14:41:12,368 INFO <KafkaTCPTransport [::1:9094<-54283]>: connected to <socket.socket fd=1168, family=23, type=1, proto=0, laddr=('::1', 54283, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 14:41:12,376 INFO <KafkaConnection node_id=1 host=[::1:9094<-54283] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 14:41:12,384 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 14:41:12,385 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 14:41:12,385 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 14:41:12,387 INFO <KafkaTCPTransport [::1:9094<-54284]>: connected to <socket.socket fd=1300, family=23, type=1, proto=0, laddr=('::1', 54284, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 14:41:12,388 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-16 14:41:12,388 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 14:41:12,398 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-54284] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 14:41:12,416 INFO Received member id kafka-python-3.0.11-1dd77cf4-c66b-46e5-acb1-5246a699aca4 for group odoo-ticket-sync; will retry join-group
+2026-09-16 14:41:12,417 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 14:41:12,478 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 14:41:15,428 INFO Successfully joined group odoo-ticket-sync <Generation 12 (member_id: kafka-python-3.0.11-1dd77cf4-c66b-46e5-acb1-5246a699aca4, protocol: range)>
+2026-09-16 14:41:15,429 INFO Elected group leader -- performing partition assignments using range
+2026-09-16 14:41:15,434 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 14:41:15,445 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-16 14:41:15,445 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-16 14:41:38,041 WARNING No Odoo user mapped for assignedTo='jasonas'
+2026-09-16 14:41:38,333 INFO Created Odoo task 13838 for ticket 201
+2026-09-16 14:41:38,398 WARNING No Odoo user mapped for assignedTo='chrisbe'
+2026-09-16 14:41:38,566 INFO Created Odoo task 13839 for ticket 202
+2026-09-16 14:46:15,544 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 14:51:16,042 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 14:56:16,419 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:01:16,810 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:06:17,210 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:11:17,625 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:16:18,017 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:21:18,039 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:26:18,186 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:31:18,425 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:36:18,600 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:39:05,548 WARNING No Odoo user mapped for assignedTo='jasonas'
+2026-09-16 15:39:05,731 ERROR Failed to process message at offset 79
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 323, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 202, in update_task
+    return type_id
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 172, in _execute
+    self._project_id_cache = {}  # { project_name: project_id }
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13838,), User: 14)'>
+2026-09-16 15:39:05,777 WARNING No Odoo user mapped for assignedTo='chrisbe'
+2026-09-16 15:39:05,875 ERROR Failed to process message at offset 80
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 323, in run
+    odoo_fields = transform_ticket(ticket, odoo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 202, in update_task
+    return type_id
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 172, in _execute
+    self._project_id_cache = {}  # { project_name: project_id }
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13839,), User: 14)'>
+2026-09-16 15:39:37,224 INFO IO loop starting (client_id=kafka-python-3.0.11)
+2026-09-16 15:39:37,224 INFO Attempting bootstrap to bootstrap-0 at localhost:9094 (rack None)
+2026-09-16 15:39:37,224 INFO Initializing connection for node_id bootstrap-0 at localhost:9094 (rack=None)
+2026-09-16 15:39:37,228 INFO <KafkaTCPTransport [::1:9094<-49802]>: connected to <socket.socket fd=1312, family=23, type=1, proto=0, laddr=('::1', 49802, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 15:39:37,236 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-49802] broker_version=unknown (initializing)>: Broker version identified as 3.9
+2026-09-16 15:39:37,236 INFO <KafkaConnection node_id=bootstrap-0 host=[::1:9094<-49802] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 15:39:37,241 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 15:39:37,242 INFO Bootstrap complete: ClusterMetadata(brokers: 1, topics: 0, coordinators: 0)
+2026-09-16 15:39:37,242 INFO Closing bootstrap connection bootstrap-0
+2026-09-16 15:39:37,242 INFO <KafkaTCPTransport [::1:9094<-49802]>: Closing transport
+2026-09-16 15:39:37,242 INFO <KafkaConnection node_id=bootstrap-0 broker_version=(3, 9) (disconnected)>: Connection closed
+2026-09-16 15:39:37,243 INFO Starting metadata refresh loop
+2026-09-16 15:39:37,244 INFO Updating subscribed topics to: ('tickets',)
+2026-09-16 15:39:37,245 INFO Listening on topic 'tickets' as group 'odoo-ticket-sync'...
+2026-09-16 15:39:37,245 INFO Initializing connection for node_id 1 at localhost:9094 (rack=None)
+2026-09-16 15:39:37,246 INFO <KafkaTCPTransport [::1:9094<-49803]>: connected to <socket.socket fd=1312, family=23, type=1, proto=0, laddr=('::1', 49803, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 15:39:37,254 INFO <KafkaConnection node_id=1 host=[::1:9094<-49803] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 15:39:37,257 INFO Coordinator for GROUP/odoo-ticket-sync is MetadataResponseBroker(node_id='coordinator-1', host='localhost', port=9094, rack=None)
+2026-09-16 15:39:37,257 INFO Discovered coordinator coordinator-1 for group odoo-ticket-sync
+2026-09-16 15:39:37,257 INFO Initializing connection for node_id coordinator-1 at localhost:9094 (rack=None)
+2026-09-16 15:39:37,258 INFO <KafkaTCPTransport [::1:9094<-49804]>: connected to <socket.socket fd=1112, family=23, type=1, proto=0, laddr=('::1', 49804, 0, 0), raddr=('::1', 9094, 0, 0)>
+2026-09-16 15:39:37,259 INFO Revoking previously assigned partitions set() for group odoo-ticket-sync
+2026-09-16 15:39:37,259 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 15:39:37,265 INFO <KafkaConnection node_id=coordinator-1 host=[::1:9094<-49804] broker_version=(3, 9) (connected)>: Connected
+2026-09-16 15:39:37,270 INFO Received member id kafka-python-3.0.11-30bf28b6-fc64-4913-b6b7-6235ba08010a for group odoo-ticket-sync; will retry join-group
+2026-09-16 15:39:37,270 INFO (Re-)joining group odoo-ticket-sync
+2026-09-16 15:39:37,346 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:40:18,339 INFO Successfully joined group odoo-ticket-sync <Generation 13 (member_id: kafka-python-3.0.11-30bf28b6-fc64-4913-b6b7-6235ba08010a, protocol: range)>
+2026-09-16 15:40:18,339 INFO Elected group leader -- performing partition assignments using range
+2026-09-16 15:40:18,344 INFO Updated metadata: ClusterMetadata(brokers: 1, topics: 1, coordinators: 1)
+2026-09-16 15:40:18,348 INFO Updated partition assignment: [TopicPartition(topic='tickets', partition=0)]
+2026-09-16 15:40:18,348 INFO Setting newly assigned partitions {TopicPartition(topic='tickets', partition=0)} for group odoo-ticket-sync
+2026-09-16 15:40:18,516 WARNING No Odoo user mapped for assignedTo='jasonas'
+2026-09-16 15:40:18,653 ERROR Failed to process message at offset 81
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 331, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 208, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 177, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13838,), User: 14)'>
+2026-09-16 15:40:18,719 WARNING No Odoo user mapped for assignedTo='chrisbe'
+2026-09-16 15:40:18,830 ERROR Failed to process message at offset 82
+Traceback (most recent call last):
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 331, in run
+    odoo.update_task(existing_task_id, odoo_fields)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 208, in update_task
+    self._execute("project.task", "write", [task_id], values)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JasonAs\Pictures\Odoo-Kraken\kafka-sandbox\kraken_to_odoo_consumer.py", line 177, in _execute
+    return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1096, in __call__
+    return self.__send(self.__name, args)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1435, in __request
+    response = self.__transport.request(
+        self.__host,
+    ...<2 lines>...
+        verbose=self.__verbose
+        )
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1140, in request
+    return self.single_request(host, handler, request_body, verbose)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1156, in single_request
+    return self.parse_response(resp)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 1325, in parse_response
+    return u.close()
+           ~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\xmlrpc\client.py", line 642, in close
+    raise Fault(**self._stack[0])
+xmlrpc.client.Fault: <Fault 2: 'Record does not exist or has been deleted.\n(Record: project.task(13839,), User: 14)'>
