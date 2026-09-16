@@ -70,7 +70,7 @@ def make_incident(ticket_num: int) -> dict:
 
 if __name__ == "__main__":
     print("Sending IT&DC test ticket for Jason...")
-    event_jason = make_incident(201)
+    event_jason = make_incident(301)
     event_jason["assignedTo"] = "jasonas"            # <--- Update this to match Jason's Kraken username!
     event_jason["adminGroup"] = "IT SUPPORT"         # Maps to IT&DC in your JSON
     event_jason["status"] = "OPEN"                   
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     print(f"Created ticket {event_jason['serviceRecordNumber']} for Jason")
 
     print("Sending Application test ticket for Chris...")
-    event_chris = make_incident(202)
+    event_chris = make_incident(302)
     event_chris["assignedTo"] = "chrisbe"            # <--- Update this to match Chris's Kraken username!
     event_chris["adminGroup"] = "APPLICATIONS"       # Maps to Application in your JSON
     event_chris["status"] = "OPEN"                   

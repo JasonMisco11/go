@@ -172,9 +172,40 @@ class OdooClient:
         self._project_id_cache = {}  # { project_name: project_id }
         self._department_id_cache = {}
         self._issue_type_id_cache = {}
+        self._user_cache = {}  # { identifier: user_id }
 
     def _execute(self, model, method, *args, **kwargs):
         return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
+
+    def get_user_id(self, identifier: str):
+        if not identifier:
+            return None
+            
+        # 1. Check manual JSON overrides first (user_mapping.json)
+        if identifier in USER_MAP:
+            return USER_MAP[identifier]
+            
+        # 2. Check local runtime cache
+        if identifier in self._user_cache:
+            return self._user_cache[identifier]
+            
+        # 3. Query Odoo dynamically (search by login/email, or exact name match)
+        domain = [
+            '|', ('login', 'ilike', identifier),
+            '|', ('email', 'ilike', identifier),
+                 ('name', 'ilike', identifier)
+        ]
+        
+        try:
+            ids = self._execute("res.users", "search", domain)
+            if ids:
+                self._user_cache[identifier] = ids[0]
+                return ids[0]
+        except Exception as e:
+            log.warning("Failed to search Odoo for user '%s': %s", identifier, e)
+
+        self._user_cache[identifier] = None
+        return None
 
     def get_project_id(self, project_name: str) -> int:
         if project_name in self._project_id_cache:
@@ -252,11 +283,11 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
     )
     issue_type_id = odoo.get_issue_type_id(issue_type_name)
 
-    assignee_id = USER_MAP.get(ticket.get("assignedTo"))
+    assignee_id = odoo.get_user_id(ticket.get("assignedTo"))
     if assignee_id is None:
-        log.warning("No Odoo user mapped for assignedTo='%s'", ticket.get("assignedTo"))
+        log.warning("No Odoo user found for assignedTo='%s'", ticket.get("assignedTo"))
 
-    reporter_id = USER_MAP.get(ticket.get("owner") or ticket.get("createdBy"))
+    reporter_id = odoo.get_user_id(ticket.get("owner") or ticket.get("createdBy"))
 
     description_parts = [ticket.get("description") or ""]
     if ticket.get("cause"):
