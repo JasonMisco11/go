@@ -31,34 +31,39 @@ import os
 import sqlite3
 import xmlrpc.client
 from datetime import datetime, timezone
+from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 from kafka import KafkaConsumer
 
-load_dotenv()  # reads .env in the current working directory
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Config
+# Load environment variables from the root folder
+env = dotenv_values(BASE_DIR / ".env")
+
+# ---------------------------------------------------------------------------
+# Configuration
 
 KAFKA_BOOTSTRAP_SERVERS = os.environ.get("KAFKA_BOOTSTRAP_SERVERS", "192.168.251.152:9094")
 KAFKA_TOPIC = "tickets"
 KAFKA_GROUP_ID = "odoo-ticket-sync"                
 KAFKA_AUTO_OFFSET_RESET = "earliest"               # 'latest' once you've caught up historically
 
-ODOO_URL = os.environ["ODOO_URL"]
-ODOO_DB = os.environ["ODOO_DB"]
-ODOO_USERNAME = os.environ["ODOO_USERNAME"]
-ODOO_API_KEY = os.environ["ODOO_API_KEY"]
+ODOO_URL = env.get("ODOO_URL")
+ODOO_DB = env.get("ODOO_DB")
+ODOO_USERNAME = env.get("ODOO_USERNAME")
+ODOO_API_KEY = env.get("ODOO_API_KEY")
 
 # Maps Kraken adminGroup to a specific Odoo Project Name
 PROJECT_MAP = {
-    "IT SUPPORT": "Kraken - IT&DC",
-    "APPLICATIONS": "Kraken - Application",
+    "IT SUPPORT": "Kraken - IT",
+    "APPLICATIONS": "Kraken - Applications",
 }
 DEFAULT_PROJECT_NAME = "Kraken Testing"  # Fallback if adminGroup isn't in PROJECT_MAP
 
-DEPARTMENT_MAPPING_FILE = "admin_group_to_odoo_department.json"
-IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", "kraken_odoo_sync.db")
-LOG_FILE = os.environ.get("LOG_FILE_PATH", "sync.log")
+DEPARTMENT_MAPPING_FILE = BASE_DIR / "config" / "admin_group_to_odoo_department.json"
+IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", BASE_DIR / "data" / "kraken_odoo_sync.db")
+LOG_FILE = os.environ.get("LOG_FILE_PATH", BASE_DIR / "data" / "sync.log")
 
 ADMIN_GROUP_JSON_KEY = "adminGroup"   # TODO: confirm real key name from a live message
 
@@ -81,10 +86,10 @@ STATUS_TO_STAGE_MAP = {
     "CLOSED": 5,           # Done
 }
 
-ISSUE_TYPE_MAPPING_FILE = "ticket_type_to_odoo_issue_type.json"
+ISSUE_TYPE_MAPPING_FILE = BASE_DIR / "config" / "ticket_type_to_odoo_issue_type.json"
 REQUESTOR_TYPE_DEFAULT = "external"  # TODO: confirm valid selection value - Kraken tickets are all external
 
-USER_MAPPING_FILE = "user_mapping.json"
+USER_MAPPING_FILE = BASE_DIR / "config" / "user_mapping.json"
 
 def load_user_mapping() -> dict:
     try:
