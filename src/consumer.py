@@ -41,10 +41,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Load environment variables from the root folder
 env = dotenv_values(BASE_DIR / ".env")
 
-# ---------------------------------------------------------------------------
 # Configuration
 
-KAFKA_BOOTSTRAP_SERVERS = os.environ.get("KAFKA_BOOTSTRAP_SERVERS", "192.168.251.152:9094")
+KAFKA_BOOTSTRAP_SERVERS = env.get("KAFKA_BOOTSTRAP_SERVERS") or os.environ.get("KAFKA_BOOTSTRAP_SERVERS") or "localhost:9094"
 KAFKA_TOPIC = "tickets"
 KAFKA_GROUP_ID = "odoo-ticket-sync"                
 KAFKA_AUTO_OFFSET_RESET = "earliest"               # 'latest' once you've caught up historically
@@ -56,7 +55,8 @@ ODOO_API_KEY = env.get("ODOO_API_KEY")
 
 # Maps Kraken adminGroup to a specific Odoo Project Name
 PROJECT_MAP = {
-    "IT SUPPORT": "Kraken - IT",
+    "IT SUPPORT": "Kraken - IT & DC",
+    "IT & DC": "Kraken - IT & DC",
     "APPLICATIONS": "Kraken - Applications",
 }
 DEFAULT_PROJECT_NAME = "Kraken Testing"  # Fallback if adminGroup isn't in PROJECT_MAP
@@ -75,16 +75,28 @@ PRIORITY_MAP = {
     "LOW": "0",
 }
 
-# Maps Kraken ticket status to Odoo Kanban stage_id
+# Maps Kraken ticket status to Odoo Kanban stage_id   {production}
+# STATUS_TO_STAGE_MAP = {
+#     "OPEN": 1,             # Backlog
+#     "ASSIGNED": 2,         # Planned for Sprint
+#     "IN_PROGRESS": 3,      # In Progress
+#     "ON_HOLD": 4,          # On Hold
+#     "PENDING": 4,          # On Hold
+#     "RESOLVED": 5,         # Done
+#     "CLOSED": 5,           # Done
+# }
+
+
 STATUS_TO_STAGE_MAP = {
-    "OPEN": 1,             # Backlog
-    "ASSIGNED": 2,         # Planned for Sprint
-    "IN_PROGRESS": 3,      # In Progress
-    "ON_HOLD": 4,          # On Hold
-    "PENDING": 4,          # On Hold
-    "RESOLVED": 5,         # Done
-    "CLOSED": 5,           # Done
+    "OPEN": 22,            # Backlog
+    "ASSIGNED": 23,        # Planned for Sprint
+    "IN_PROGRESS": 24,     # In Progress
+    "ON_HOLD": 25,         # On Hold
+    "PENDING": 25,         # On Hold
+    "RESOLVED": 20,        # Done
+    "CLOSED": 20,          # Done
 }
+
 
 ISSUE_TYPE_MAPPING_FILE = BASE_DIR / "config" / "ticket_type_to_odoo_issue_type.json"
 REQUESTOR_TYPE_DEFAULT = "external"  # TODO: confirm valid selection value - Kraken tickets are all external
@@ -287,6 +299,8 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
         ticket.get("type"), ISSUE_TYPE_MAPPING, FALLBACK_ISSUE_TYPE, "Ticket type"
     )
     issue_type_id = odoo.get_issue_type_id(issue_type_name)
+
+    log.info("DEBUG: adminGroup='%s' -> mapped to '%s' -> dept_id=%s", admin_group, department_name, department_id)
 
     assignee_id = odoo.get_user_id(ticket.get("assignedTo"))
     if assignee_id is None:

@@ -1,14 +1,14 @@
 {
   "_instructions": "Fill in every value marked NEEDS_REVIEW with the correct Odoo department name (must match exactly, case-sensitive, from the current Odoo department list). Do not delete keys - if an admin group should be ignored/unrouted, set its value to null explicitly.",
   "_odoo_departments_reference": [
-    "Application",
+    "Application",  
     "Business Developers",
     "CSC",
     "Contract Managers",
     "CyberHawk",
     "Field Installation",
     "ICT General",
-    "IT&DC",
+    "IT&DC", 
     "LLV",
     "NOC",
     "Pre-Sales",
@@ -16,6 +16,8 @@
     "SuperCloud",
     "Technical Operation",
     "VOIP"
+
+
   ],
   "mapping": {
     "ADB_SUPPORT": "NEEDS_REVIEW",
@@ -39,12 +41,13 @@
     "GCB_SUPPORT": "NEEDS_REVIEW",
     "ILS": "NEEDS_REVIEW",
     "INFOSEC": "CyberHawk",
-    "IT SUPPORT": "IT&DC",
+    "IT SUPPORT": "IT & DC",
+    "IT & DC": "IT & DC",
     "MAINTENANCE": "Field Installation",
     "MSSP": "CyberHawk",
     "NETWORK INFRASTRUCTURE": "NOC",
     "NETWORK OPERATIONS (NOC)": "NOC",
-    "NHIA_SUPPORT": "CSC",
+    "NHIA_SUPPORT": "Application",
     "PABX SUPPORT": "VOIP",
     "PROJECT TEAM": "Project Management",
     "RENT CONTROL SUPPORT": "CSC",
@@ -55,3 +58,7 @@
   },
   "fallback_department": "ICT General"
 }
+
+
+
+

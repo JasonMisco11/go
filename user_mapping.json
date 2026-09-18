@@ -1,0 +1,20 @@
+{
+  "_instructions": "Change the keys (e.g., 'Andrews.O..Appiah') to match the exact username Kraken sends (e.g., 'Andy.Appiah').",
+  "mapping": {
+    "Administrator": {
+      "odoo_user_id": 2,
+      "odoo_name": "Administrator",
+      "odoo_email": "chrisbe@stlghana.com"
+    },
+    "Daniel.David": {
+      "odoo_user_id": 5,
+      "odoo_name": "Daniel David",
+      "odoo_email": "danielda@stlghana.com"
+    },
+    "Jason.Asamoah": {
+      "odoo_user_id": 6,
+      "odoo_name": "Jason Asamoah",
+      "odoo_email": "jasonas@stlghana.com"
+    }
+  }
+}

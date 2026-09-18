@@ -33,7 +33,7 @@ output = {
     "mapping": mapping
 }
 
-with open("user_mapping.json", "w") as f:
+with open("user_mapping copy.json", "w") as f:
     json.dump(output, f, indent=2)
 
 print(f"Generated user_mapping.json with {len(users)} Odoo users!")
