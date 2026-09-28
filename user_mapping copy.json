@@ -1,0 +1,40 @@
+{
+  "_instructions": "Change the keys (e.g., 'Andrews.O..Appiah') to match the exact username Kraken sends (e.g., 'Andy.Appiah').",
+  "mapping": {
+    "Administrator": {
+      "odoo_user_id": 2,
+      "odoo_name": "Administrator",
+      "odoo_email": "chrisbe@stlghana.com"
+    },
+    "Andrew": {
+      "odoo_user_id": 9,
+      "odoo_name": "Andrew",
+      "odoo_email": "andrewsap@stlghana.com"
+    },
+    "Chris.Bekor": {
+      "odoo_user_id": 7,
+      "odoo_name": "Chris Bekor",
+      "odoo_email": "chrisbekor99@gmail.com"
+    },
+    "Daniel.David": {
+      "odoo_user_id": 3,
+      "odoo_name": "Daniel David",
+      "odoo_email": "danielda@stlghana.com"
+    },
+    "Ebenezer.Nuamah": {
+      "odoo_user_id": 5,
+      "odoo_name": "Ebenezer Nuamah",
+      "odoo_email": "ebenezernu@stlghana.com"
+    },
+    "Jason.Asamoah": {
+      "odoo_user_id": 6,
+      "odoo_name": "Jason Asamoah",
+      "odoo_email": "jasonas@stlghana.com"
+    },
+    "Joanita": {
+      "odoo_user_id": 10,
+      "odoo_name": "Joanita",
+      "odoo_email": "joanitaal@stlghana.com"
+    }
+  }
+}

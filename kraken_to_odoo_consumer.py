@@ -60,7 +60,7 @@ DEPARTMENT_MAPPING_FILE = "admin_group_to_odoo_department.json"
 IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", "kraken_odoo_sync.db")
 LOG_FILE = os.environ.get("LOG_FILE_PATH", "sync.log")
 
-ADMIN_GROUP_JSON_KEY = "adminGroup"   # TODO: confirm real key name from a live message
+ADMIN_GROUP_JSON_KEY = "unitName"   # Confirmed from live message
 
 # Mapped from Odoo's x_priority selection values
 PRIORITY_MAP = {
@@ -72,13 +72,13 @@ PRIORITY_MAP = {
 
 # Maps Kraken ticket status to Odoo Kanban stage_id
 STATUS_TO_STAGE_MAP = {
-    "OPEN": 1,             # Backlog
-    "ASSIGNED": 2,         # Planned for Sprint
-    "IN_PROGRESS": 3,      # In Progress
-    "ON_HOLD": 4,          # On Hold
-    "PENDING": 4,          # On Hold
-    "RESOLVED": 5,         # Done
-    "CLOSED": 5,           # Done
+    "OPEN": 22,            # Backlog
+    "ASSIGNED": 23,        # Planned for Sprint
+    "IN_PROGRESS": 24,     # In Progress
+    "ON_HOLD": 25,         # On Hold
+    "PENDING": 25,         # On Hold
+    "RESOLVED": 20,        # Done
+    "CLOSED": 20,          # Done
 }
 
 ISSUE_TYPE_MAPPING_FILE = "ticket_type_to_odoo_issue_type.json"
@@ -278,10 +278,13 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
     )
     department_id = odoo.get_department_id(department_name)
 
+    issue_raw = ticket.get("typeName") or ticket.get("type")
     issue_type_name = resolve_mapped_value(
-        ticket.get("type"), ISSUE_TYPE_MAPPING, FALLBACK_ISSUE_TYPE, "Ticket type"
+        issue_raw, ISSUE_TYPE_MAPPING, FALLBACK_ISSUE_TYPE, "Ticket type"
     )
     issue_type_id = odoo.get_issue_type_id(issue_type_name)
+
+    log.info("DEBUG: adminGroup='%s' -> mapped to '%s' -> dept_id=%s", admin_group, department_name, department_id)
 
     assignee_id = odoo.get_user_id(ticket.get("assignedTo"))
     if assignee_id is None:
@@ -297,15 +300,21 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
 
     target_project_name = PROJECT_MAP.get(admin_group, DEFAULT_PROJECT_NAME)
 
+    title = ticket.get('title') or ticket.get('description') or ''
+    title = title[:80] if title else "Ticket"
+
+    priority_raw = ticket.get("priorityName") or ticket.get("priority") or ""
+    priority_val = PRIORITY_MAP.get(priority_raw.upper())
+
     values = {
-        "name": f"[{ticket.get('serviceRecordNumber')}] {(ticket.get('description') or '')[:80]}",
+        "name": f"[{ticket.get('serviceRecordNumber', 'NEW')}] {title}",
         "description": "".join(description_parts),
         "project_id": odoo.get_project_id(target_project_name),
         "date_deadline": epoch_to_odoo_datetime(ticket.get("dueDate")),
         "date_start": epoch_to_odoo_datetime(ticket.get("createdTime")),
         "x_department_id": department_id,
-        "x_priority": PRIORITY_MAP.get(ticket.get("priority")),
-        "priority": PRIORITY_MAP.get(ticket.get("priority")),
+        "x_priority": priority_val,
+        "priority": priority_val,
         "x_issue_type": issue_type_id,
         "requestor_type": REQUESTOR_TYPE_DEFAULT,
     }
@@ -324,7 +333,11 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
 # Main consume loop
 
 def extract_ticket_dto(raw_value: dict) -> dict:
-    """Handle both a wrapped envelope ({"ticketDTO": {...}}) and a raw payload."""
+    """Handle both a wrapped envelope and a raw payload."""
+    if "incident" in raw_value:
+        return raw_value["incident"]
+    if "payload" in raw_value:
+        return raw_value["payload"]
     if "ticketDTO" in raw_value:
         return raw_value["ticketDTO"]
     return raw_value
@@ -348,8 +361,10 @@ def run():
     for message in consumer:
         try:
             ticket = extract_ticket_dto(message.value)
+            log.info("RAW KRAKEN PAYLOAD RECEIVED: %s", ticket)
+            
             kraken_id = str(ticket.get("id"))
-            status = ticket.get("status")
+            status = (ticket.get("statusName") or ticket.get("status") or "").upper()
 
             odoo_fields = transform_ticket(ticket, odoo)
             existing_task_id = get_mapped_task_id(conn, kraken_id)
