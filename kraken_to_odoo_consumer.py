@@ -31,34 +31,40 @@ import os
 import sqlite3
 import xmlrpc.client
 from datetime import datetime, timezone
+from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 from kafka import KafkaConsumer
 
-load_dotenv()  # reads .env in the current working directory
+BASE_DIR = Path(__file__).resolve().parent
 
-# Config
+# Load environment variables from the root folder
+env = dotenv_values(BASE_DIR / ".env")
 
-KAFKA_BOOTSTRAP_SERVERS = os.environ.get("KAFKA_BOOTSTRAP_SERVERS", "192.168.251.152:9094")
+# Configuration
+
+KAFKA_BOOTSTRAP_SERVERS = env.get("KAFKA_BOOTSTRAP_SERVERS") or os.environ.get("KAFKA_BOOTSTRAP_SERVERS") 
 KAFKA_TOPIC = "tickets"
 KAFKA_GROUP_ID = "odoo-ticket-sync"                
 KAFKA_AUTO_OFFSET_RESET = "earliest"               # 'latest' once you've caught up historically
 
-ODOO_URL = os.environ["ODOO_URL"]
-ODOO_DB = os.environ["ODOO_DB"]
-ODOO_USERNAME = os.environ["ODOO_USERNAME"]
-ODOO_API_KEY = os.environ["ODOO_API_KEY"]
+ODOO_URL = env.get("ODOO_URL")
+ODOO_DB = env.get("ODOO_DB")
+ODOO_USERNAME = env.get("ODOO_USERNAME")
+ODOO_API_KEY = env.get("ODOO_API_KEY")
 
 # Maps Kraken adminGroup to a specific Odoo Project Name
 PROJECT_MAP = {
-    "IT SUPPORT": "Kraken - IT&DC",
-    "APPLICATIONS": "Kraken - Application",
+    "IT SUPPORT": "Kraken - IT & DC",
+    "IT & DC": "Kraken - IT & DC",
+    "APPLICATIONS": "Kraken - Applications",
+    "APPLICATIONS - AX": "Kraken - Applications",
 }
 DEFAULT_PROJECT_NAME = "Kraken Testing"  # Fallback if adminGroup isn't in PROJECT_MAP
 
-DEPARTMENT_MAPPING_FILE = "admin_group_to_odoo_department.json"
-IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", "kraken_odoo_sync.db")
-LOG_FILE = os.environ.get("LOG_FILE_PATH", "sync.log")
+DEPARTMENT_MAPPING_FILE = BASE_DIR / "admin_group_to_odoo_department.json"
+IDEMPOTENCY_DB_FILE = os.environ.get("DB_FILE_PATH", BASE_DIR / "data" / "kraken_odoo_sync.db")
+LOG_FILE = os.environ.get("LOG_FILE_PATH", BASE_DIR / "data" / "sync.log")
 
 ADMIN_GROUP_JSON_KEY = "unitName"   # Confirmed from live message
 
@@ -70,21 +76,22 @@ PRIORITY_MAP = {
     "LOW": "0",
 }
 
-# Maps Kraken ticket status to Odoo Kanban stage_id
-STATUS_TO_STAGE_MAP = {
-    "OPEN": 22,            # Backlog
-    "ASSIGNED": 23,        # Planned for Sprint
-    "IN_PROGRESS": 24,     # In Progress
-    "ON_HOLD": 25,         # On Hold
-    "PENDING": 25,         # On Hold
-    "RESOLVED": 20,        # Done
-    "CLOSED": 20,          # Done
+# Maps Kraken ticket status to Odoo Kanban stage Name dynamically
+STATUS_TO_STAGE_NAME = {
+    "OPEN": "Backlog",
+    "ASSIGNED": "Planned for Sprint",
+    "IN_PROGRESS": "In Progress",
+    "ON_HOLD": "On Hold",
+    "PENDING": "On Hold",
+    "RESOLVED": "Done",
+    "CLOSED": "Done",
 }
 
-ISSUE_TYPE_MAPPING_FILE = "ticket_type_to_odoo_issue_type.json"
+
+ISSUE_TYPE_MAPPING_FILE = BASE_DIR / "ticket_type_to_odoo_issue_type.json"
 REQUESTOR_TYPE_DEFAULT = "external"  # TODO: confirm valid selection value - Kraken tickets are all external
 
-USER_MAPPING_FILE = "user_mapping.json"
+USER_MAPPING_FILE = BASE_DIR / "user_mapping copy.json"
 
 def load_user_mapping() -> dict:
     try:
@@ -173,9 +180,39 @@ class OdooClient:
         self._department_id_cache = {}
         self._issue_type_id_cache = {}
         self._user_cache = {}  # { identifier: user_id }
+        self._stage_id_cache = {}  # { 'project_id_stage_name': stage_id }
 
     def _execute(self, model, method, *args, **kwargs):
         return self.models.execute_kw(ODOO_DB, self.uid, ODOO_API_KEY, model, method, list(args), kwargs)
+
+    def get_stage_id(self, project_id: int, stage_name: str) -> int | None:
+        """Dynamically look up stage ID by name within a specific project."""
+        if not project_id or not stage_name:
+            return None
+        cache_key = f"{project_id}_{stage_name}"
+        if cache_key in self._stage_id_cache:
+            return self._stage_id_cache[cache_key]
+            
+        try:
+            # _execute calls list(args), which wraps this domain in another list
+            # So we pass [(...), (...)] and it becomes [[(...), (...)]] for Odoo
+            domain = [("project_ids", "in", [project_id]), ("name", "=", stage_name)]
+            stages = self.models.execute_kw(
+                ODOO_DB, self.uid, ODOO_API_KEY,
+                "project.task.type", "search_read",
+                [domain],
+                {"fields": ["id"], "limit": 1}
+            )
+            if stages:
+                stage_id = stages[0]["id"]
+                self._stage_id_cache[cache_key] = stage_id
+                log.info("Resolved stage '%s' for project %s -> stage_id=%s", stage_name, project_id, stage_id)
+                return stage_id
+            else:
+                log.warning("Stage '%s' not found for project %s", stage_name, project_id)
+        except Exception as e:
+            log.warning("Failed to look up stage '%s' for project %s: %s", stage_name, project_id, e)
+        return None
 
     def get_user_id(self, identifier: str):
         if not identifier:
@@ -320,12 +357,21 @@ def transform_ticket(ticket: dict, odoo: OdooClient) -> dict:
     }
     if assignee_id:
         values["x_assignee_id"] = assignee_id
+        # Add both the assignee AND the API user (us) so we retain visibility
+        user_id_list = list(set([assignee_id, odoo.uid]))
+        values["user_ids"] = [(6, 0, user_id_list)]
+    else:
+        # No assignee mapped — assign to ourselves so task is visible
+        values["user_ids"] = [(6, 0, [odoo.uid])]
     if reporter_id:
         values["x_reporter_id"] = reporter_id
         
-    stage_id = STATUS_TO_STAGE_MAP.get(ticket.get("status"))
-    if stage_id:
-        values["stage_id"] = stage_id
+    status_key = ticket.get("statusName") or ticket.get("status") or ""
+    stage_name = STATUS_TO_STAGE_NAME.get(status_key.upper())
+    if stage_name and values.get("project_id"):
+        stage_id = odoo.get_stage_id(values["project_id"], stage_name)
+        if stage_id:
+            values["stage_id"] = stage_id
 
     return values
 
