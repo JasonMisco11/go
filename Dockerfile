@@ -39,11 +39,13 @@ RUN addgroup --system --gid ${UID} appgroup && \
 COPY --from=builder /opt/venv /opt/venv
 
 # Copy the application code and set ownership
-COPY --chown=appuser:appgroup src/ src/
-COPY --chown=appuser:appgroup config/ config/
+COPY --chown=appuser:appgroup kraken_to_odoo_consumer.py .
+COPY --chown=appuser:appgroup admin_group_to_odoo_department.json .
+COPY --chown=appuser:appgroup ticket_type_to_odoo_issue_type.json .
+COPY --chown=appuser:appgroup user_mapping.json .
 
 # Switch to the non-root user
 USER appuser
 
 # Run the consumer
-CMD ["python", "src/consumer.py"]
+CMD ["python", "kraken_to_odoo_consumer.py"]
