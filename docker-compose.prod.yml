@@ -2,12 +2,35 @@ version: '3.8'
 
 services:
   odoo-kraken-consumer:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: odoo_kraken_consumer
     restart: unless-stopped
-    # Use your production environment variables here, or load them from a .env file on the server
+    # Define environment variables explicitly or load from a secure file
     env_file:
       - .env
     volumes:
-      # Mount a local 'data' folder into the container so the SQLite DB and logs survive restarts
+      # Mount local 'data' folder for SQLite DB and logs persistence
       - ./data:/app/data
+    
+    # Industry standard logging limits to prevent disk space exhaustion
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Resource limits to prevent memory leaks from crashing the host node
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.10'
+          memory: 128M
+
+    # We can add a healthcheck if desired, but for a simple consumer, 
+    # checking the process status via docker's normal tracking is often enough.
+    # If the app exposes metrics or health on a port later, add HEALTHCHECK here.
