@@ -1,22 +1,49 @@
-FROM python:3.11-slim
+# Stage 1: Build dependencies
+FROM python:3.11-slim AS builder
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Install dependencies
+# Install build dependencies if needed (for c-extensions)
+# RUN apt-get update && apt-get install -y --no-install-recommends gcc && rm -rf /var/lib/apt/lists/*
+
+# Create a virtual environment to isolate dependencies
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir pip==23.3.2 setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Copy the Python scripts and JSON mapping files
-COPY kraken_to_odoo_consumer.py .
-COPY admin_group_to_odoo_department.json .
-COPY ticket_type_to_odoo_issue_type.json .
-COPY user_mapping.json .
+# Stage 2: Production image
+FROM python:3.11-slim
 
-# Set environment variables for data persistence
-# (These will point to the mounted /app/data volume)
-ENV DB_FILE_PATH="/app/data/kraken_odoo_sync.db"
-ENV LOG_FILE_PATH="/app/data/sync.log"
+# Prevent Python from writing pyc files and buffer
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PATH="/opt/venv/bin:$PATH" \
+    DB_FILE_PATH="/app/data/kraken_odoo_sync.db" \
+    LOG_FILE_PATH="/app/data/sync.log"
 
-# Run the consumer when the container launches
-CMD ["python", "-u", "kraken_to_odoo_consumer.py"]
+WORKDIR /app
+
+# Create a non-root user and group for security
+ARG UID=10001
+RUN addgroup --system --gid ${UID} appgroup && \
+    adduser --system --uid ${UID} --ingroup appgroup appuser && \
+    mkdir -p /app/data && \
+    chown -R appuser:appgroup /app
+
+# Copy the virtual environment from the builder stage
+COPY --from=builder /opt/venv /opt/venv
+
+# Copy the application code and set ownership
+COPY --chown=appuser:appgroup src/ src/
+COPY --chown=appuser:appgroup config/ config/
+
+# Switch to the non-root user
+USER appuser
+
+# Run the consumer
+CMD ["python", "src/consumer.py"]
